@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProbEdu | Lesson 1</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg px-2 navbar-dark bg-dark fixed-top" aria-label="Fifth navbar example">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home.html">
+          <img src="../images/logo-white.png" class="img-fluid" width="140" alt="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarsExample05">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link link-light" aria-current="page" href="home.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link-light" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link link-light" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle link-light" href="features.html" data-bs-toggle="dropdown" aria-expanded="false">Features</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="lessons.html">Lessons</a></li>
+                <li><a class="dropdown-item" href="quizzes.html">Quizzes</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex me-4 mb-2 mb-lg-0" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <input type="image" src="../images/search.png" class="img-fluid my-auto" width="24" alt="search">
+          </form>
+          <button class="btn btn-success px-4" type="submit">Sign in</button>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container-fluid" style="margin-top:80px">
+      <div class="d-flex" id="top">
+          
+        <!-- Side bar -->
+        <div class="px-2" style="width: 170px;">
+          <h5 class="pt-4 text-center">On this Page</h5>
+          <hr>
+          <ul class="nav nav-pills flex-column mb-auto">
+              <li class="nav-item">
+                  <a href="#topic3-1" class="nav-link text-secondary fs-6" aria-current="page">Mutually Exclusive Events</a>
+              </li>
+          </ul>
+        </div>
+
+        <!-- Breadcrumbs -->
+        <div class="container">
+          <div class="align-items">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb breadcrumb-chevron rounded-3">
+                  <li class="breadcrumb-item">
+                      <a class="link-body-emphasis" href="home.html"><img src="../images/home-icon.png" width="16" alt=""></a>
+                  </li>
+                  <li class="breadcrumb-item">
+                      <a class="link-body-emphasis fw-semibold text-decoration-none" href="features.html">Features</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                      <a class="link-body-emphasis fw-semibold text-decoration-none" href="lessons.html">Lessons</a>
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">Addition Rule</li>
+              </ol>
+            </nav>
+        
+
+            <!-- Lesson 1 Content -->
+            <div class="container mb-5">
+              <h1>The Addition Rule</h1>
+              <p class="mb-4" id="topic3-1">
+                The probability that either event \(A\) or \(B\) (or both) will happen is:
+                $$P(A\,or\,B) = P(A) + P(B) - P(A\,and\,B)$$
+              </p>
+              <h3>Mutually Exclusive (or Disjoint) Events</h3>
+              <p>If \(P(A\,or\,B) = P(A) + P(B)\) (i.e. \(P(A\,and\,B)=0\)), we say that \(A\) and \(B\) are <span class="text-primary">mutually exlcussive</span> or <span class="text-primary">disjoint</span>. In other words, the events cannot happen at the same time.</p>
+              <div class="text-center"><img class="mb-4" src="../images/mutually-exclusive.png" width="200" alt="venn diagram"></div>
+              <div class="mb-4">
+                <p>
+                  <b>Examples:</b><br>
+                  Calculate each of the following probabilities, and state whether the events are mutually exclusive or not:
+                  <ol>
+                    <li class="mb-2">
+                      <div class="mb-2">You roll a 5 or a 6 on a standard die.</div>
+                      <span class="text-danger">
+                        Answer: <br>
+                        These events are mutually exclusive since it isn’t possible to roll both a 5 and a 6 at the same time. So,
+                        $$P(5\,or\,6) = P(5) + P(6) = \frac{1}{6} + \frac{1}{6} = \frac{1}{3} $$
+                      </span>
+                    </li>
+                    <li class="mb-2">
+                      <div class="mb-2">You draw a 4 or a heart from a standard deck of cards.</div>
+                      <span class="text-danger">
+                        Answer: <br>
+                        These events are not mutually exclusive, since you can draw a card that is both a 4 and a heart (the 4 of hearts). So,
+                        $$P(4\,or\,heart) = P(4) + P(heart) - P(4\,and\,heart) \\ = \frac{4}{52} + \frac{13}{52} - \frac{1}{52} = \frac{16}{52} = \frac{4}{13} $$
+                      </span>
+                    </li>
+                    <li class="mb-2">
+                      <div class="mb-2">You draw a spade or a club from a standard deck of cards.</div>
+                      <span class="text-danger">
+                        Answer: <br>
+                        These events are mutually exclusive, so
+                        $$P(spade\,or\,club) = P(spade) + P(club) \\ = \frac{1}{4} + \frac{1}{4} = \frac{1}{2}$$
+                      </span>
+                    </li>
+                    <li class="mb-2">
+                      <div class="mb-2">The following table shows the Myers-Briggs personality preference and area of study for a random sample of 519 college students.</div>
+                      <table class="table table-bordered border-dark text-center">
+                        <thead>
+                          <tr>
+                            <th>Myers-Briggs Preference</th>
+                            <th>Arts and Science</th>
+                            <th>Business</th>
+                            <th>Allies Health</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th>IN (introvert, intuitive)</th>
+                            <td>64</td>
+                            <td>15</td>
+                            <td>17</td>
+                          </tr>
+                          <tr>
+                            <th>EN (extrovert, intuitive)</th>
+                            <td>82</td>
+                            <td>42</td>
+                            <td>30</td>
+                          </tr>
+                          <tr>
+                            <th>IS (introvert, sensing)</th>
+                            <td>68</td>
+                            <td>35</td>
+                            <td>12</td>
+                          </tr>
+                          <tr>
+                            <th>ES (extrovert, sensing)</th>
+                            <td>75</td>
+                            <td>42</td>
+                            <td>37</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      Find each of the following probabilities for a student chosen at random:
+                      <ul>
+                        <li class="mb-2">
+                          <div class="mb-2">The student is an intuitive extrovert.</div>
+                          <span class="text-danger">
+                            Answer: <br>
+                            We will calculate this by adding the probabilities over each of the following majors:
+                            $$P(E) = \frac{82}{519} + \frac{42}{519} + \frac{30}{519} = \frac{154}{519} = 0.2967$$
+                          </span>
+                        </li>
+                        <li class="mb-2">
+                          <div class="mb-2">The student is either a sensing extroverted business major or an intuitive introverted allied health major.</div>
+                          <span class="text-danger">
+                            Answer: <br>
+                            These events are mutually exclusive, so the probability that we want is
+                            $$\frac{42}{519} + \frac{17}{519} = \frac{59}{519} = 0.2237$$.
+                          </span>
+                        </li>
+                      </ul>
+                    </li>
+                  </ol>
+                </p>
+              </div>
+              <div class="d-flex flex-column flex-sm-row justify-content-between my-5">
+                <a href="lesson2.html" class="btn btn-primary">Previous Lesson</a>
+                <a href="#top" class="my-auto">Back to top</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="text-bg-dark">
+      <div class="container">
+        <div class="py-3">
+          
+          <div class="d-flex flex-column flex-sm-row justify-content-between pt-4">
+            <div class="col-6 col-md-2">
+              <h5>Section</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2"><a href="home.html" class="nav-link p-0 text-white">Home</a></li>
+                <li class="nav-item mb-2"><a href="about.html" class="nav-link p-0 text-white">About</a></li>
+                <li class="nav-item mb-2"><a href="contact.html" class="nav-link p-0 text-white">Contact</a></li>
+                <li class="nav-item mb-2"><a href="features.html" class="nav-link p-0 text-white">Features</a></li>
+                <li class="nav-item mb-2"><a href="download.html" class="nav-link p-0 text-white">Download</a></li>
+              </ul>
+            </div>
+      
+            <div class="col-md-5 offset-md-1">
+              <form>
+                <h5>Your email address</h5>
+                <div class="flex-column flex-sm-row w-100 gap-2">
+                  <label for="newsletter1" class="visually-hidden">Email address</label>
+                  <input id="newsletter1" type="text" class="form-control mb-2" placeholder="Email address">
+                  <button class="btn btn-success w-100 py-2" type="button">Sign up</button>
+                </div>
+              </form>
+            </div>
+          </div>
+      
+          <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+            <p>For Educational Purposes Only</p>
+            <ul class="list-unstyled d-flex">
+              <li class="ms-3"><a class="link-body-emphasis" href="https://www.facebook.com/" target="_blank"><img src="../images/fb-icon.png" class="img-fluid" width="24" alt="fb icon"></a></li>
+              <li class="ms-3"><a class="link-body-emphasis" href="https://www.twitter.com/" target="_blank"><img src="../images/twitter-icon.png" class="img-fluid" width="24" alt="twitter icon"></a></li>
+              <li class="ms-3"><a class="link-body-emphasis" href="https://www.instagram.com/" target="_blank"><img src="../images/ig-icon.png" class="img-fluid" width="24" alt="ig icon"></a></li>
+              <li class="ms-3"><a class="link-body-emphasis" href="mailto:camilaenverzo12@gmail.com" target="_blank"><img src="../images/gmail-icon.png" class="img-fluid" width="24" alt="gmail icon"></a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+</body>
+</html>

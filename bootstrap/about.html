@@ -9,10 +9,10 @@
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light px-4 mb-4" aria-label="Fifth navbar example">
+    <nav class="navbar navbar-expand-lg px-2 navbar-dark bg-dark fixed-top" aria-label="Fifth navbar example">
       <div class="container-fluid">
         <a class="navbar-brand" href="home.html">
-          <img src="../images/logo.png" class="img-fluid" width="140" alt="logo">
+          <img src="../images/logo-white.png" class="img-fluid" width="140" alt="logo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -21,43 +21,115 @@
         <div class="collapse navbar-collapse" id="navbarsExample05">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+              <a class="nav-link link-light" aria-current="page" href="home.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="about.html">About</a>
+              <a class="nav-link link-light" href="about.html">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="contact.html">Contact</a>
+              <a class="nav-link link-light" href="contact.html">Contact</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle active" href="features.html" data-bs-toggle="dropdown" aria-expanded="false">Features</a>
+              <a class="nav-link dropdown-toggle link-light" href="features.html" data-bs-toggle="dropdown" aria-expanded="false">Features</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="lessons.html">Lessons</a></li>
                 <li><a class="dropdown-item" href="quizzes.html">Quizzes</a></li>
               </ul>
             </li>
           </ul>
-          <form class="d-flex" role="search">
+          <form class="d-flex me-4 mb-2 mb-lg-0" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-dark" type="submit">Search</button>
+            <input type="image" src="../images/search.png" class="img-fluid my-auto" width="24" alt="search">
           </form>
+          <a href="" class="btn btn-success px-4" data-bs-toggle="modal" data-bs-target="#modalSigninForm">Sign in</a>
         </div>
       </div>
     </nav>
     
     <main>
-      <div class="container">
-        <div class="mb-5">
-          <h5>About ProbEdu</h5>
-          <p>ProbEdu is your go-to destination for mastering probability with ease. We're dedicated to providing a user-friendly platform that makes learning and applying probability concepts enjoyable for everyone.</p>
-          <h5>What We Do</h5>
-          <p>At ProbEdu, we simplify probability education. Our platform offers clear lessons, interactive quizzes, and a supportive community, ensuring a seamless and engaging learning experience.</p>
-          <h5>About Our Lessons</h5>
-          <p>Explore our user-friendly lessons designed to make probability theory accessible to learners of all levels. We believe in an enjoyable learning journey for everyone.</p>
-          <h5>About Our Quizzes</h5>
-          <p>Dive into our interactive quizzes, crafted to reinforce your understanding of probability concepts. With a focus on engagement and skill-building, our quizzes make learning both effective and fun.</p>
-          <h5>Who We Are</h5>
-          <p>We are a passionate team at ProbEdu, driven by the mission to simplify probability education. Our diverse backgrounds and shared enthusiasm for learning create a welcoming community for all probability enthusiasts.</p>
+      <!--Sign in Form-->
+      <div class="modal fade" id="modalSigninForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="md-form mb-4">
+                        <input type="email" id="defaultForm-email" class="form-control validate" placeholder="Your email">
+                    </div>
+
+                    <div class="md-form">
+                        <input type="password" id="defaultForm-pass" class="form-control validate" placeholder="Your password">
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <div class="col-lg-4 mx-auto">
+                        <div class="d-grid gap-2">
+                          <button class="btn btn-primary" type="button">Sign in</button>
+                          <a href="" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modalSignupForm">Sign up</a>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!--Sign up Form-->
+      <div class="modal fade" id="modalSignupForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center">
+                    <h4 class="modal-title w-100 font-weight-bold">Sign up</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="md-form mb-4">
+                        <input type="email" id="defaultForm-email" class="form-control validate" placeholder="Your name">
+                    </div>
+
+                    <div class="md-form mb-4">
+                        <input type="password" id="defaultForm-pass" class="form-control validate" placeholder="Your email">
+                    </div>
+
+                    <div class="md-form">
+                      <input type="password" id="defaultForm-pass" class="form-control validate" placeholder="Your password">
+                  </div>
+
+                </div>
+                <div class="modal-footer">
+                    <div class="col-lg-4 mx-auto">
+                        <div class="d-grid gap-2">
+                          <button class="btn btn-primary" type="button">Sign up</button>
+                          <a href="" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modalSigninForm">Sign in</a>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="py-5">
+        <div class="bg-image mb-5" style="background-image: url('https://mdbcdn.b-cdn.net/img/new/standard/city/053.webp'); background-position: center;">
+          <div class="mask py-5" style="background-color: rgba(0, 0, 0, 0.6);">
+            <div class="my-auto text-center py-4">
+              <h1 class="text-white">About Us</h1>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <h4>About ProbEdu</h4>
+            <p>ProbEdu is your go-to destination for mastering probability with ease. We're dedicated to providing a user-friendly platform that makes learning and applying probability concepts enjoyable for everyone.</p>
+            <h4>What We Do</h4>
+            <p>At ProbEdu, we simplify probability education. Our platform offers clear lessons, interactive quizzes, and a supportive community.</p>
+            <h4>About Our Lessons</h4>
+            <p>Explore our user-friendly lessons designed to make probability theory accessible to learners of all levels. We believe in an enjoyable learning journey for everyone.</p>
+            <h4>About Our Quizzes</h4>
+            <p>Dive into our interactive quizzes, crafted to reinforce your understanding of probability concepts. With a focus on engagement and skill-building, our quizzes make learning both effective and fun.</p>
+            <h4>Who We Are</h4>
+            <p>We are a passionate team at ProbEdu, driven by the mission to simplify probability education. Our diverse backgrounds and shared enthusiasm for learning create a welcoming community for all probability enthusiasts.</p>
         </div>
       </div>
     </main>
@@ -65,17 +137,33 @@
     <footer class="text-bg-dark">
       <div class="container">
           <div class="py-3">
-            
-            <ul class="nav justify-content-center py-2">
-              <li class="nav-item"><a href="home.html" class="nav-link px-2 text-white">Home</a></li>
-              <li class="nav-item"><a href="about.html" class="nav-link px-2 text-white">About</a></li>
-              <li class="nav-item"><a href="contact.html" class="nav-link px-2 text-white">Contact</a></li>
-              <li class="nav-item"><a href="features.html" class="nav-link px-2 text-white">Features</a></li>
-              <li class="nav-item"><a href="download.html" class="nav-link px-2 text-white">Download Our App</a></li>
-            </ul>
+
+            <div class="d-flex flex-column flex-sm-row justify-content-between pt-4">
+              <div class="col-6 col-md-2">
+                <h5>Section</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="home.html" class="nav-link p-0 text-white">Home</a></li>
+                  <li class="nav-item mb-2"><a href="about.html" class="nav-link p-0 text-white">About</a></li>
+                  <li class="nav-item mb-2"><a href="contact.html" class="nav-link p-0 text-white">Contact</a></li>
+                  <li class="nav-item mb-2"><a href="features.html" class="nav-link p-0 text-white">Features</a></li>
+                  <li class="nav-item mb-2"><a href="download.html" class="nav-link p-0 text-white">Download</a></li>
+                </ul>
+              </div>
+        
+              <div class="col-md-5 offset-md-1">
+                <form>
+                  <h5>Your email address</h5>
+                  <div class="flex-column flex-sm-row w-100 gap-2">
+                    <label for="newsletter1" class="visually-hidden">Email address</label>
+                    <input id="newsletter1" type="text" class="form-control mb-2" placeholder="Email address">
+                    <button class="btn btn-success w-100 py-2" type="button">Sign up</button>
+                  </div>
+                </form>
+              </div>
+            </div>
         
             <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-              <p>&copy; 2023 ProbEdu. For Educational Purposes Only.</p>
+              <p>For Educational Purposes Only</p>
               <ul class="list-unstyled d-flex">
                 <li class="ms-3"><a class="link-body-emphasis" href="https://www.facebook.com/" target="_blank"><img src="../images/fb-icon.png" class="img-fluid" width="24" alt="fb icon"></a></li>
                 <li class="ms-3"><a class="link-body-emphasis" href="https://www.twitter.com/" target="_blank"><img src="../images/twitter-icon.png" class="img-fluid" width="24" alt="twitter icon"></a></li>
@@ -83,7 +171,8 @@
                 <li class="ms-3"><a class="link-body-emphasis" href="mailto:camilaenverzo12@gmail.com" target="_blank"><img src="../images/gmail-icon.png" class="img-fluid" width="24" alt="gmail icon"></a></li>
               </ul>
             </div>
-        </div>
+          </div>
+      </div>
     </footer>
 </body>
 </html>
