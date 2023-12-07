@@ -7,8 +7,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
     <nav class="navbar navbar-expand-lg px-2 navbar-dark bg-dark fixed-top" aria-label="Fifth navbar example">
         <div class="container-fluid">
           <a class="navbar-brand" href="home.html">
@@ -41,57 +39,438 @@
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               <input type="image" src="../images/search.png" class="img-fluid my-auto" width="24" alt="search">
             </form>
-            <button class="btn btn-success px-4" type="submit">Sign in</button>
+            <a href="" class="btn btn-success px-4" data-bs-toggle="modal" data-bs-target="#modalSigninForm">Sign in</a>
           </div>
         </div>
     </nav>
 
-    <main>
-        <div class="py-5">
-            <div class="container pt-5">
-                <h1>Quiz 2</h1>
-            </div>
-        </div>
-    </main>
-
-    <footer class="text-bg-dark">
-        <div class="container">
-            <div class="py-3">
-              
-              <div class="d-flex flex-column flex-sm-row justify-content-between pt-4">
-                <div class="col-6 col-md-2">
-                  <h5>Section</h5>
-                  <ul class="nav flex-column">
-                    <li class="nav-item mb-2"><a href="home.html" class="nav-link p-0 text-white">Home</a></li>
-                    <li class="nav-item mb-2"><a href="about.html" class="nav-link p-0 text-white">About</a></li>
-                    <li class="nav-item mb-2"><a href="contact.html" class="nav-link p-0 text-white">Contact</a></li>
-                    <li class="nav-item mb-2"><a href="features.html" class="nav-link p-0 text-white">Features</a></li>
-                    <li class="nav-item mb-2"><a href="download.html" class="nav-link p-0 text-white">Download</a></li>
-                  </ul>
+    <main style="margin-top:80px">
+      <!--Sign in Form-->
+      <div class="modal fade p-4 py-md-5" id="modalSigninForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content rounded-4 shadow">
+                <div class="modal-header p-5 pb-4 border-bottom-0">
+                    <h1 class="fw-bold mb-0 fs-2">Sign in</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-          
-                <div class="col-md-5 offset-md-1">
-                  <form>
-                    <h5>Your email address</h5>
-                    <div class="flex-column flex-sm-row w-100 gap-2">
-                      <label for="newsletter1" class="visually-hidden">Email address</label>
-                      <input id="newsletter1" type="text" class="form-control mb-2" placeholder="Email address">
-                      <button class="btn btn-success w-100 py-2" type="button">Sign up</button>
+                <div class="modal-body p-5 pt-0">
+                  <form action="">
+                    <div class="form-floating mb-3">
+                      <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
+                      <label for="floatingInput">Email address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
+                      <label for="floatingPassword">Password</label>
+                    </div>
+
+                    <div class="text-center">
+                      <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign in</button>
+                      <a href="" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modalSignupForm">Sign up</a>
                     </div>
                   </form>
                 </div>
-              </div>
-          
-              <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-                <p>For Educational Purposes Only</p>
-                <ul class="list-unstyled d-flex">
-                  <li class="ms-3"><a class="link-body-emphasis" href="https://www.facebook.com/" target="_blank"><img src="../images/fb-icon.png" class="img-fluid" width="24" alt="fb icon"></a></li>
-                  <li class="ms-3"><a class="link-body-emphasis" href="https://www.twitter.com/" target="_blank"><img src="../images/twitter-icon.png" class="img-fluid" width="24" alt="twitter icon"></a></li>
-                  <li class="ms-3"><a class="link-body-emphasis" href="https://www.instagram.com/" target="_blank"><img src="../images/ig-icon.png" class="img-fluid" width="24" alt="ig icon"></a></li>
-                  <li class="ms-3"><a class="link-body-emphasis" href="mailto:camilaenverzo12@gmail.com" target="_blank"><img src="../images/gmail-icon.png" class="img-fluid" width="24" alt="gmail icon"></a></li>
-                </ul>
-              </div>
-          </div>
+            </div>
+        </div>
+      </div>
+
+      <!--Sign up Form-->
+      <div class="modal fade p-4 py-md-5" id="modalSignupForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content rounded-4 shadow">
+                <div class="modal-header p-5 pb-4 border-bottom-0">
+                    <h1 class="fw-bold mb-0 fs-2">Sign up</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-5 pt-0">
+                  <form action="">
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control rounded-3" id="floatingInput" placeholder="Name">
+                      <label for="floatingInput">Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
+                      <label for="floatingInput">Email address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
+                      <label for="floatingPassword">Password</label>
+                    </div>
+
+                    <div class="text-center">
+                      <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign up</button>
+                      <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small><br>
+                      <a href="" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modalSigninForm">Sign in</a>
+                    </div>
+                  </form>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <!--Quiz-->
+        <div class="container">
+            <form class="my-5 fs-5 fs-sm-6">
+                <h1 class="text-center mb-4">Conditional Probability and the Multiplication Rule Quiz</h1>
+                <p class="mb-5">Welcome to the Conditional Probability and the Multiplication Rule Quiz! Please carefully read each question and select the best answer from the multiple-choice options. Choose only one answer per question and proceed to the next one. Take your time, there's no time limit. After answering all 10 questions, review your responses. Good luck!</p>
+                <ol class="mx-lg-5 mx-sm-0">
+                  <li class="mb-4">
+                    <div class="mb-2">Events are independent if the occurrence of one event does not affect the probability of the other.</div>
+                    <div class="border rounded p-2 mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item1" id="option11">
+                        <label class="form-check-label" for="option11">
+                          A. True
+                        </label>
+                      </div>
+                    </div>
+                    <div class="border rounded p-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item1" id="option12">
+                        <label class="form-check-label" for="option12">
+                          B. False
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="mb-4">
+                    <div class="mb-2">You flip a fair coin twice. What is the probability of getting heads on the first flip and tails on the second?</div>
+                    <div class="border rounded p-2 mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item2" id="option21">
+                        <label class="form-check-label" for="option21">
+                          A. \(\frac{1}{4}\)
+                        </label>
+                      </div>
+                    </div>
+                    <div class="border rounded p-2 mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item2" id="option22">
+                        <label class="form-check-label" for="option22">
+                          B. \(\frac{1}{2}\)
+                        </label>
+                      </div>
+                    </div>
+                    <div class="border rounded p-2 mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item2" id="option23">
+                        <label class="form-check-label" for="option23">
+                          C. \(\frac{1}{3}\)
+                        </label>
+                      </div>
+                    </div>
+                    <div class="border rounded p-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item2" id="option24">
+                        <label class="form-check-label" for="option24">
+                          D. \(\frac{1}{4}\)
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="mb-4">
+                    <div class="mb-2">A bag contains 5 red balls and 4 green balls. If you draw one ball, replace it, and then draw a second ball, what is the probability of getting a red ball both times?</div>
+                    <div class="border rounded p-2 mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item3" id="option31">
+                        <label class="form-check-label" for="option31">
+                          A. \(\frac{5}{36}\)
+                        </label>
+                      </div>
+                    </div>
+                    <div class="border rounded p-2 mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item3" id="option32">
+                        <label class="form-check-label" for="option32">
+                          B. \(\frac{1}{9}\)
+                        </label>
+                      </div>
+                    </div>
+                    <div class="border rounded p-2 mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item3" id="option33">
+                        <label class="form-check-label" for="option33">
+                          C. \(\frac{5}{16}\)
+                        </label>
+                      </div>
+                    </div>
+                    <div class="border rounded p-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item3" id="option34">
+                        <label class="form-check-label" for="option34">
+                          D. \(\frac{1}{4}\)
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="mb-4">
+                    <div class="mb-2">You roll a fair six-sided die. What is the probability of rolling a 3 on the first roll and a 4 on the second roll?</div>
+                    <div class="border rounded p-2 mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item4" id="option41">
+                        <label class="form-check-label" for="option41">
+                          A. \(\frac{1}{12}\)
+                        </label>
+                      </div>
+                    </div>
+                    <div class="border rounded p-2 mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item4" id="option42">
+                        <label class="form-check-label" for="option42">
+                          B. \(\frac{1}{6}\)
+                        </label>
+                      </div>
+                    </div>
+                    <div class="border rounded p-2 mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item4" id="option43">
+                        <label class="form-check-label" for="option43">
+                          C. \(\frac{1}{36}\)
+                        </label>
+                      </div>
+                    </div>
+                    <div class="border rounded p-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item4" id="option44">
+                        <label class="form-check-label" for="option44">
+                          D. \(\frac{1}{18}\)
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="mb-4">
+                    <div class="mb-2">In a deck of cards, you draw one card and do not replace it. What is the probability of drawing two kings in a row?</div>
+                    <div class="border rounded p-2 mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item5" id="option51">
+                        <label class="form-check-label" for="option51">
+                          A. \(\frac{1}{221}\)
+                        </label>
+                      </div>
+                    </div>
+                    <div class="border rounded p-2 mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item5" id="option52">
+                        <label class="form-check-label" for="option52">
+                          B. \(\frac{1}{2210}\)
+                        </label>
+                      </div>
+                    </div>
+                    <div class="border rounded p-2 mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item5" id="option53">
+                        <label class="form-check-label" for="option53">
+                          C. \(\frac{1}{169}\)
+                        </label>
+                      </div>
+                    </div>
+                    <div class="border rounded p-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item5" id="option54">
+                        <label class="form-check-label" for="option54">
+                          D. \(\frac{1}{52}\)
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="mb-4">
+                    <div class="mb-2">You select a marble from a bag containing 3 red marbles and 5 blue marbles. If you do not replace the marble, what is the probability of drawing two red marbles in a row?</div>
+                    <div class="border rounded p-2 mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item6" id="option61">
+                        <label class="form-check-label" for="option61">
+                          A. \(\frac{3}{40} \)
+                        </label>
+                      </div>
+                    </div>
+                    <div class="border rounded p-2 mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item6" id="option62">
+                        <label class="form-check-label" for="option62">
+                          B. \(\frac{3}{64} \)
+                        </label>
+                      </div>
+                    </div>
+                    <div class="border rounded p-2 mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item6" id="option63">
+                        <label class="form-check-label" for="option63">
+                          C. \(\frac{3}{56} \)
+                        </label>
+                      </div>
+                    </div>
+                    <div class="border rounded p-2 mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item6" id="option64">
+                        <label class="form-check-label" for="option64">
+                          D. \(\frac{3}{35} \)
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="mb-4">
+                    <div class="mb-2">You draw a card from a deck, record the outcome, and then draw a second card without replacing the first. What is the probability of drawing two aces in a row?</div>
+                    <div class="border rounded p-2 mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item7" id="option71">
+                        <label class="form-check-label" for="option71">
+                          A. \(\frac{1}{221} \)
+                        </label>
+                      </div>
+                    </div>
+                    <div class="border rounded p-2 mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item7" id="option72">
+                        <label class="form-check-label" for="option72">
+                          B. \(\frac{1}{169} \)
+                        </label>
+                      </div>
+                    </div>
+                    <div class="border rounded p-2 mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item7" id="option73">
+                        <label class="form-check-label" for="option73">
+                          C. \(\frac{1}{132} \)
+                        </label>
+                      </div>
+                    </div>
+                    <div class="border rounded p-2 mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item7" id="option74">
+                        <label class="form-check-label" for="option74">
+                          D. \(\frac{1}{2210} \)
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="mb-4">
+                    <div class="mb-2">A box contains 4 red balls and 3 green balls. If you draw two balls without replacement, what is the probability of getting a red ball and then a green ball?</div>
+                    <div class="border rounded p-2 mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item8" id="option81">
+                        <label class="form-check-label" for="option81">
+                          A. \(\frac{2}{21} \)
+                        </label>
+                      </div>
+                    </div>
+                    <div class="border rounded p-2 mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item8" id="option82">
+                        <label class="form-check-label" for="option82">
+                          B. \(\frac{4}{21} \)
+                        </label>
+                      </div>
+                    </div>
+                    <div class="border rounded p-2 mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item8" id="option83">
+                        <label class="form-check-label" for="option83">
+                          C. \(\frac{3}{14} \)
+                        </label>
+                      </div>
+                    </div>
+                    <div class="border rounded p-2 mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item8" id="option84">
+                        <label class="form-check-label" for="option84">
+                          D. \(\frac{7}{24} \)
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="mb-4">
+                    <div class="mb-2">You roll a fair six-sided die and then flip a fair coin. What is the probability of rolling a 3 on the die and getting heads on the coin flip?</div>
+                    <div class="border rounded p-2 mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item9" id="option91">
+                        <label class="form-check-label" for="option91">
+                          A. \(\frac{1}{6} \)
+                        </label>
+                      </div>
+                    </div>
+                    <div class="border rounded p-2 mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item9" id="option92">
+                        <label class="form-check-label" for="option92">
+                          B. \(\frac{1}{12} \)
+                        </label>
+                      </div>
+                    </div>
+                    <div class="border rounded p-2 mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item9" id="option93">
+                        <label class="form-check-label" for="option93">
+                          C. \(\frac{1}{3} \)
+                        </label>
+                      </div>
+                    </div>
+                    <div class="border rounded p-2 mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item9" id="option94">
+                        <label class="form-check-label" for="option94">
+                          D. \(\frac{1}{18} \)
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="mb-4">
+                    <div class="mb-2">A bag contains 2 yellow marbles, 3 red marbles, and 4 blue marbles. If you draw two marbles without replacement, what is the probability of getting a yellow marble and then a red marble?</div>
+                    <div class="border rounded p-2 mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item9" id="option101">
+                        <label class="form-check-label" for="option101">
+                          A. \(\frac{1}{12} \)
+                        </label>
+                      </div>
+                    </div>
+                    <div class="border rounded p-2 mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item9" id="option102">
+                        <label class="form-check-label" for="option102">
+                          B. \(\frac{1}{15} \)
+                        </label>
+                      </div>
+                    </div>
+                    <div class="border rounded p-2 mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item9" id="option103">
+                        <label class="form-check-label" for="option103">
+                          C. \(\frac{1}{18} \)
+                        </label>
+                      </div>
+                    </div>
+                    <div class="border rounded p-2 mb-2">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="quiz2item9" id="option104">
+                        <label class="form-check-label" for="option104">
+                          D. \(\frac{1}{24} \)
+                        </label>
+                      </div>
+                    </div>
+                  </li>
+                </ol>
+                <div class="d-flex justify-content-end my-5 me-lg-5 me-sm-0">
+                  <a href=""><button class="btn btn-primary px-4" type="submit">Submit</button></a>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-bg-dark">
+      <div class="container">
+        <div class="d-flex justify-content-between py-4">
+          <p>For Educational Purposes Only</p>
+          <ul class="list-unstyled d-flex">
+            <li><a href="https://www.facebook.com/" target="_blank"><img src="../images/fb-icon.png" width="24" alt="fb icon"></a></li>
+            <li class="ms-2"><a href="https://www.twitter.com/" target="_blank"><img src="../images/twitter-icon.png" width="24" alt="twitter icon"></a></li>
+            <li class="ms-2"><a href="https://www.instagram.com/" target="_blank"><img src="../images/ig-icon.png" width="24" alt="ig icon"></a></li>
+            <li class="ms-2"><a href="mailto:camilaenverzo12@gmail.com" target="_blank"><img src="../images/gmail-icon.png" width="24" alt="gmail icon"></a></li>
+          </ul>
+        </div>
+      </div>
     </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
 </body>
 </html>

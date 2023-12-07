@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProbEdu | Lesson 1</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg px-2 navbar-dark bg-dark fixed-top" aria-label="Fifth navbar example">
@@ -39,285 +40,356 @@
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <input type="image" src="../images/search.png" class="img-fluid my-auto" width="24" alt="search">
           </form>
-          <button class="btn btn-success px-4" type="submit">Sign in</button>
+          <a href="" class="btn btn-success px-4" data-bs-toggle="modal" data-bs-target="#modalSigninForm">Sign in</a>
         </div>
       </div>
     </nav>
 
-    <main class="container-fluid" style="margin-top:80px">
-      <div class="d-flex" id="top">
-          
-        <!-- Side bar -->
-        <div class="px-2" style="width: 170px;">
-          <h5 class="pt-4 text-center">On this Page</h5>
-          <hr>
-          <ul class="nav nav-pills flex-column mb-auto">
-              <li class="nav-item">
-                  <a href="#topic2-1" class="nav-link text-secondary fs-6" aria-current="page">Examples</a>
-              </li>
-              <li>
-                  <a href="#topic2-2" class="nav-link text-secondary fs-6">Independent and Dependent Events</a>
-              </li>
-              <li>
-                  <a href="#topic2-3" class="nav-link text-secondary fs-6">The Multiplication Rule</a>
-              </li>
-          </ul>
+    <main>
+
+      <!--Sign in Form-->
+      <div class="modal fade p-4 py-md-5" id="modalSigninForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content rounded-4 shadow">
+                <div class="modal-header p-5 pb-4 border-bottom-0">
+                    <h1 class="fw-bold mb-0 fs-2">Sign in</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-5 pt-0">
+                  <form action="">
+                    <div class="form-floating mb-3">
+                      <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
+                      <label for="floatingInput">Email address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
+                      <label for="floatingPassword">Password</label>
+                    </div>
+
+                    <div class="text-center">
+                      <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign in</button>
+                      <a href="" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modalSignupForm">Sign up</a>
+                    </div>
+                  </form>
+                </div>
+            </div>
         </div>
+      </div>
 
-        <!-- Breadcrumbs -->
+      <!--Sign up Form-->
+      <div class="modal fade p-4 py-md-5" id="modalSignupForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content rounded-4 shadow">
+                <div class="modal-header p-5 pb-4 border-bottom-0">
+                    <h1 class="fw-bold mb-0 fs-2">Sign up</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-5 pt-0">
+                  <form action="">
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control rounded-3" id="floatingInput" placeholder="Name">
+                      <label for="floatingInput">Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
+                      <label for="floatingInput">Email address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
+                      <label for="floatingPassword">Password</label>
+                    </div>
+
+                    <div class="text-center">
+                      <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign up</button>
+                      <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small><br>
+                      <a href="" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modalSigninForm">Sign in</a>
+                    </div>
+                  </form>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="fixed-top-margin">
+        <!--Sidebar-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <img src="../images/sidebar-menu.png" width="30" alt="">
+        </button>
+
+        <div class="collapse navbar-collapse" id="sidebar">
+            <div class="sidebar-menu overflow-auto bg-white text-bg-light" style="width: 150px;">
+                <h5 class="text-center pt-2">On this Page</h5>
+                <hr>
+                <ul class="list-unstyled flex-column ps-2">
+                    <li class="nav-item">
+                        <a href="#topic2-1" class="nav-link text-secondary fs-6 mb-2" aria-current="page">Conditional Probability and the Multiplication Rule</a>
+                    </li>
+                    <li>
+                        <a href="#topic2-2" class="nav-link text-secondary fs-6 mb-2">Independent and Dependent Events</a>
+                    </li>
+                    <li>
+                        <a href="#topic2-3" class="nav-link text-secondary fs-6 mb-2">The Multiplication Rule</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+      </div>
+      
+      <div style="margin-top: 80px;">
         <div class="container">
-          <div class="align-items">
-            <nav aria-label="breadcrumb">
+
+            <!--Breadcrumbs-->
+            <div aria-label="breadcrumb" id="top">
               <ol class="breadcrumb breadcrumb-chevron rounded-3">
-                  <li class="breadcrumb-item">
-                      <a class="link-body-emphasis" href="home.html"><img src="../images/home-icon.png" width="16" alt=""></a>
-                  </li>
-                  <li class="breadcrumb-item">
-                      <a class="link-body-emphasis fw-semibold text-decoration-none" href="features.html">Features</a>
-                  </li>
-                  <li class="breadcrumb-item">
-                      <a class="link-body-emphasis fw-semibold text-decoration-none" href="lessons.html">Lessons</a>
-                  </li>
-                  <li class="breadcrumb-item active" aria-current="page">Conditional Probability and the Multiplication Rule</li>
+                <li class="breadcrumb-item">
+                  <a class="link-body-emphasis" href="home.html">
+                    <img src="../images/home-icon.png" width="16" alt="">
+                    <span class="visually-hidden">Home</span>
+                  </a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a class="link-body-emphasis fw-semibold text-decoration-none" href="features.html">Features</a>
+                </li>
+                <li class="breadcrumb-item">
+                  <a class="link-body-emphasis fw-semibold text-decoration-none" href="lessons.html">Lessons</a>
+                </li>
+                <li class="breadcrumb-item active" aria-current="page" id="topic2-1">Conditional Probability and the Multiplication Rule</li>
               </ol>
-            </nav>
-        
-
+            </div>
+            
             <!-- Lesson 1 Content -->
-            <div class="container mb-5">
-              <h1>Conditional Probability and the Multiplication Rule</h1>
-              <p id="topic2-1">A <span class="text-primary">conditional probability</span> is the probability that an event has occurred, knowing that another event has already occurred. The probability that an event \(B\) occurs, given that \(A\) has already occurred is denoted \(P(B|A)\) and is read “the probability of \(B\) given \(A\).”</p>
-              <div class="mb-4">
-                <div class="mb-2"><b>Examples:</b></div>
-                <ol>
-                  <li class="mb-2">
-                    <div class="mb-2">Playing poker with a 5-card hand, you want to know the probability that you get a queen when you replace one card, knowing that you have a queen in your hand, and are trading in a card that is not a queen (which will not be redealt to you).</div>
-                    <span class="text-danger">
-                      Answer: <br>
-                      Since you have a queen, there are only 3 left in the deck. There are only 47 cards that might be dealt to you (you are holding 4, and know that it’s not the card you discarded). Therefore, the probability is \(\frac{3}{47}\).
-                    </span>
-                  </li>
-                  <li class="mb-2">
-                    <div class="mb-2">Using a fair coin, what is the probability of flipping 3 heads in a row, knowing that you have already flipped 2 heads?</div>
-                    <span class="text-danger">
-                      Answer: <br>
-                      Since you only need to flip one more head to achieve the result (which has a probability of \(\frac{1}{2}\)), this conditional probability is \(\frac{1}{2}\).
-                    </span>
-                  </li>
-                  <li class="mb-2">
-                    <div class="mb-2">Using the following data, what is the probability that a person you survey has a dog, given that they are male? </div>
-                    <table class="table table-bordered border-dark text-center mx-auto">
-                      <thead>
-                        <tr>
-                          <th colspan="6">Preference</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th>Gender</th>
-                          <th>Dog</th>
-                          <th>Cat</th>
-                          <th>Other Pet</th>
-                          <th>No Pet</th>
-                          <th>Total</th>
-                        </tr>
-                        <tr>
-                          <th>Female</th>
-                          <td>120</td>
-                          <td>132</td>
-                          <td>18</td>
-                          <td>30</td>
-                          <td>300</td>
-                        </tr>
-                        <tr>
-                          <th>Male</th>
-                          <td>135</td>
-                          <td>70</td>
-                          <td>20</td>
-                          <td>25</td>
-                          <td>250</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <span class="text-danger" id="topic2-2">
-                      Answer: <br>
-                      \(135\) out of \(250\) males surveyed had a dog, so the probability that we choose one with a dog is \(\frac{135}{250}\) = \(0.54\).
-                    </span>
-                  </li>
-                </ol>
-              </div>
-
-              <!--Independent and Dependent Events-->
-              <h3>Independent and Dependent Events</h3>
-              <p class="mb-4">
-                Two events are called <span>independent</span> if the occurrence of one event does not affect the probability of the occurrence of the other event. Two events A and B are independent if
-                $$P(B|A) = P(B)\:or\:P(A|B) = P(A)$$
-                Otherwise, we say that the events are <span class="text-primary">dependent</span>.
-              </p>
-              <div class="mb-4">
-                <p>
-                  <b>Examples:</b><br>
-                  Determine if each of the following pairs of events is independent or dependent.
+            <div class="my-5 fs-lg-5 fs-sm-6">
+                <div class="mb-5">
+                  <h1>Conditional Probability and the Multiplication Rule</h1>
+                  <p>A <span class="text-primary">conditional probability</span> is the probability that an event has occurred, knowing that another event has already occurred. The probability that an event \(B\) occurs, given that \(A\) has already occurred is denoted \(P(B|A)\) and is read “the probability of \(B\) given \(A\).”</p>
+                </div><hr>
+                <div class="my-5">
+                  <div class="mb-2"><b>Examples:</b></div>
                   <ol>
                     <li class="mb-2">
-                      <div class="mb-2">Selecting an Ace from a deck of cards (Event A), replacing it, shuffling the deck, then selecting a King (Event B).</div>
+                      <div class="mb-2">Playing poker with a 5-card hand, you want to know the probability that you get a queen when you replace one card, knowing that you have a queen in your hand, and are trading in a card that is not a queen (which will not be redealt to you).</div>
                       <span class="text-danger">
                         Answer: <br>
-                        Since \(P(B) = \frac{4}{52}\), and \(P(B|A) = \frac{4}{51}\), the events are dependent.
+                        Since you have a queen, there are only 3 left in the deck. There are only 47 cards that might be dealt to you (you are holding 4, and know that it’s not the card you discarded). Therefore, the probability is \(\frac{3}{47}\).
                       </span>
                     </li>
                     <li class="mb-2">
-                      <div class="mb-2">Selecting an Ace from a deck of cards (Event A), replacing it, shuffling the deck, then selecting a King (Event B).</div>
+                      <div class="mb-2">Using a fair coin, what is the probability of flipping 3 heads in a row, knowing that you have already flipped 2 heads?</div>
                       <span class="text-danger">
                         Answer: <br>
-                        Since \(P(B) = \frac{4}{52}\), and \(P(B|A) = \frac{4}{52}\), the events are independent.
+                        Since you only need to flip one more head to achieve the result (which has a probability of \(\frac{1}{2}\)), this conditional probability is \(\frac{1}{2}\).
                       </span>
                     </li>
                     <li class="mb-2">
-                      <div class="mb-2">Going to college in Utah (Event A), and growing up in Utah (Event B).</div>
-                      <span class="text-danger">
+                      <div class="mb-2">Using the following data, what is the probability that a person you survey has a dog, given that they are male? </div>
+                      <div class="mx-auto position-relative overflow-auto w-100" style="max-width: 700px;">
+                          <table class="table table-bordered border-dark text-center">
+                            <thead>
+                              <tr>
+                                <th colspan="6">Preference</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th>Gender</th>
+                                <th>Dog</th>
+                                <th>Cat</th>
+                                <th>Other Pet</th>
+                                <th>No Pet</th>
+                                <th>Total</th>
+                              </tr>
+                              <tr>
+                                <th>Female</th>
+                                <td>120</td>
+                                <td>132</td>
+                                <td>18</td>
+                                <td>30</td>
+                                <td>300</td>
+                              </tr>
+                              <tr>
+                                <th>Male</th>
+                                <td>135</td>
+                                <td>70</td>
+                                <td>20</td>
+                                <td>25</td>
+                                <td>250</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      <span class="text-danger" id="topic2-2">
                         Answer: <br>
-                        These events are dependent, since many students go to college close to home.
-                      </span>
-                    </li>
-                    <li class="mb-2">
-                      <div class="mb-2">Today’s temperature (Event A), and tomorrow’s temperature (Event B).</div>
-                      <span class="text-danger">
-                        Answer: <br>
-                        These events are dependent, since temperatures are normally fairly steady.
-                      </span>
-                    </li>
-                    <li class="mb-2">
-                      <div class="mb-2">A person’s gender and the choice of their pet, based on the following data:</div>
-                      <table class="table table-bordered border-dark text-center">
-                        <thead>
-                          <tr>
-                            <th colspan="6">Preference</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <th>Gender</th>
-                            <th>Dog</th>
-                            <th>Cat</th>
-                            <th>Other Pet</th>
-                            <th>No Pet</th>
-                            <th>Total</th>
-                          </tr>
-                          <tr>
-                            <th>Female</th>
-                            <td>120</td>
-                            <td>132</td>
-                            <td>18</td>
-                            <td>30</td>
-                            <td>300</td>
-                          </tr>
-                          <tr>
-                            <th>Male</th>
-                            <td>135</td>
-                            <td>70</td>
-                            <td>20</td>
-                            <td>25</td>
-                            <td>250</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                      <span class="text-danger" id="topic2-3">
-                        Answer: <br>
-                        We already calculated that \(P(own\,a\,dog\,|\,male) = 0.54\), so we will now calculate \(P(own\,a\,dog) = \frac{255}{550} = 0.4536\). Since these numbers are not equal, the variables are dependent. <br>
-                        (Note: Some of the difference in proportions can be due to randomness in the sampling, so if two proportions are very close to each other, it is very difficult to tell if events are dependent or not. There is a statistical test (called the Chi-Square test) which gives a more precise answer in these circumstances.)
+                        \(135\) out of \(250\) males surveyed had a dog, so the probability that we choose one with a dog is \(\frac{135}{250}\) = \(0.54\).
                       </span>
                     </li>
                   </ol>
-                </p>
+                </div><hr>
+
+                <!--Independent and Dependent Events-->
+                <div class="my-5">
+                  <h3>Independent and Dependent Events</h3>
+                  <p class="mb-4">
+                    Two events are called <span>independent</span> if the occurrence of one event does not affect the probability of the occurrence of the other event. Two events A and B are independent if
+                    <div class="position-relative overflow-auto w-100">$$P(B|A) = P(B)\:or\:P(A|B) = P(A)$$</div>
+                    Otherwise, we say that the events are <span class="text-primary">dependent</span>.
+                  </p>
+                  <div class="mb-4">
+                    <p>
+                      <b>Examples:</b><br>
+                      Determine if each of the following pairs of events is independent or dependent.
+                      <ol>
+                        <li class="mb-2">
+                          <div class="mb-2">Selecting an Ace from a deck of cards (Event A), replacing it, shuffling the deck, then selecting a King (Event B).</div>
+                          <span class="text-danger">
+                            Answer: <br>
+                            Since \(P(B) = \frac{4}{52}\), and \(P(B|A) = \frac{4}{51}\), the events are dependent.
+                          </span>
+                        </li>
+                        <li class="mb-2">
+                          <div class="mb-2">Selecting an Ace from a deck of cards (Event A), replacing it, shuffling the deck, then selecting a King (Event B).</div>
+                          <span class="text-danger">
+                            Answer: <br>
+                            Since \(P(B) = \frac{4}{52}\), and \(P(B|A) = \frac{4}{52}\), the events are independent.
+                          </span>
+                        </li>
+                        <li class="mb-2">
+                          <div class="mb-2">Going to college in Utah (Event A), and growing up in Utah (Event B).</div>
+                          <span class="text-danger">
+                            Answer: <br>
+                            These events are dependent, since many students go to college close to home.
+                          </span>
+                        </li>
+                        <li class="mb-2">
+                          <div class="mb-2">Today’s temperature (Event A), and tomorrow’s temperature (Event B).</div>
+                          <span class="text-danger">
+                            Answer: <br>
+                            These events are dependent, since temperatures are normally fairly steady.
+                          </span>
+                        </li>
+                        <li class="mb-2">
+                          <div class="mb-2">A person’s gender and the choice of their pet, based on the following data:</div>
+                          <div class="mx-auto position-relative overflow-auto w-100" style="max-width: 700px;">
+                            <table class="table table-bordered border-dark text-center">
+                              <thead>
+                                <tr>
+                                  <th colspan="6">Preference</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th>Gender</th>
+                                  <th>Dog</th>
+                                  <th>Cat</th>
+                                  <th>Other Pet</th>
+                                  <th>No Pet</th>
+                                  <th>Total</th>
+                                </tr>
+                                <tr>
+                                  <th>Female</th>
+                                  <td>120</td>
+                                  <td>132</td>
+                                  <td>18</td>
+                                  <td>30</td>
+                                  <td>300</td>
+                                </tr>
+                                <tr>
+                                  <th>Male</th>
+                                  <td>135</td>
+                                  <td>70</td>
+                                  <td>20</td>
+                                  <td>25</td>
+                                  <td>250</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                          <span class="text-danger">
+                            Answer: <br>
+                            We already calculated that 
+                            <div class="position-relative overflow-auto w-100">$$P(own\,a\,dog\,|\,male) = 0.54$$</div>
+                            so we will now calculate
+                            <div class="position-relative overflow-auto w-100">$$P(own\,a\,dog) = \frac{255}{550} = 0.4536$$</div>
+                            Since these numbers are not equal, the variables are dependent. <br>
+                            (Note: Some of the difference in proportions can be due to randomness in the sampling, so if two proportions are very close to each other, it is very difficult to tell if events are dependent or not. There is a statistical test (called the Chi-Square test) which gives a more precise answer in these circumstances.)
+                          </span>
+                        </li>
+                      </ol>
+                    </p>
+                  </div>
+                </div><hr id="topic2-3">
+
+                <!--The Multiplication Rule-->
+                <div class="my-5">
+                  <h3>The Multiplication Rule</h3>
+                  <p class="mb-4">
+                    The probability that two events will occur in sequence is
+                    <div class="position-relative overflow-auto w-100">$$P(A\,and\,B) = P(A) \cdot P(B|A)$$</div>
+                    If \(A\) and \(B\) are independent, note that this simplifies to 
+                    <div class="position-relative overflow-auto w-100">$$P(A\,and\,B) = P(A) \cdot P(B)$$</div>
+                  </p>
+                  <div>
+                    <p>
+                      <b>Examples:</b>
+                      <ol>
+                        <li class="mb-2">
+                          <div class="mb-2">Two cards are selected from a standard deck without replacement. What is the probability that an Ace is selected, then a King?</div>
+                          <span class="text-danger">
+                            Answer: <br>
+                            <div class="position-relative overflow-auto w-100">
+                              $$P(A\,and\,K) = P(A) \cdot P(K|A) = \frac{4}{52} \cdot \frac{4}{51} = \frac{16}{2652} = \frac{4}{663}$$
+                            </div>
+                          </span>
+                        </li>
+                        <li class="mb-2">
+                          <div class="mb-2">. Calculate the probability that you flip a coin and get a tail, then roll a die and roll either a 2 or 4</div>
+                          <span class="text-danger">
+                            Answer: <br>
+                            Since these events are independent,
+                            <div class="position-relative overflow-auto w-100">
+                              $$P(T\,and\,(2\,or\,4)) = P(T) \cdot P(2\,or\,4) = \frac{1}{2} \cdot 26 = \frac{1}{6}$$
+                            </div>
+                          </span>
+                        </li>
+                        <li class="mb-2">
+                          <div class="mb-2">Calculate the probability that at least two people in this class (of 25 people) share the same birthday (ignoring leap years).</div>
+                          <span class="text-danger">
+                            Answer: <br>
+                            It is easier to calculate the probability of the complement of the event (that no two people share the same birthday).
+                            <div class="position-relative overflow-auto w-100">
+                              $$P(No\,two\,students\,have\,the\,same\,birthday) = \frac{365}{365} \cdot \frac{364}{365} \cdot \frac{363}{365} \dots \frac{341}{365} = 0.4313$$
+                            </div>
+                            so the probability that two students share the same birthday is \(1 − 0.4313 = 0.5687\).
+                          </span>
+                        </li>
+                      </ol>
+                    </p>
+                  </div>
+                </div>
               </div>
 
-              <!--The Multiplication Rule-->
-              <h3>The Multiplication Rule</h3>
-              <p class="mb-4">
-                The probability that two events will occur in sequence is
-                $$P(A\,and\,B) = P(A) \cdot P(B|A)$$
-                If \(A\) and \(B\) are independent, note that this simplifies to \(P(A\,and\,B) = P(A) \cdot P(B)\).
-              </p>
-              <div class="">
-                <p>
-                  <b>Examples:</b>
-                  <ol>
-                    <li class="mb-2">
-                      <div class="mb-2">Two cards are selected from a standard deck without replacement. What is the probability that an Ace is selected, then a King?</div>
-                      <span class="text-danger">
-                        Answer: <br>
-                        $$P(A\,and\,K) = P(A) \cdot P(K|A) \\ = \frac{4}{52} \cdot \frac{4}{51} = \frac{16}{2652} = \frac{4}{663}$$
-                      </span>
-                    </li>
-                    <li class="mb-2">
-                      <div class="mb-2">. Calculate the probability that you flip a coin and get a tail, then roll a die and roll either a 2 or 4</div>
-                      <span class="text-danger">
-                        Answer: <br>
-                        Since these events are independent,
-                        $$P(T\,and\,(2\,or\,4)) = P(T) \cdot P(2\,or\,4) \\ = \frac{1}{2} \cdot 26 = \frac{1}{6}$$
-                      </span>
-                    </li>
-                    <li class="mb-2">
-                      <div class="mb-2">Calculate the probability that at least two people in this class (of 25 people) share the same birthday (ignoring leap years).</div>
-                      <span class="text-danger">
-                        Answer: <br>
-                        It is easier to calculate the probability of the complement of the event (that no two people share the same birthday).
-                        $$P(No\,two\,students\,have\,the\,same\,birthday) \\ = \frac{365}{365} \cdot \frac{364}{365} \cdot \frac{363}{365} \dots \frac{341}{365} = 0.4313$$
-                        so the probability that two students share the same birthday is \(1 − 0.4313 = 0.5687\).
-                      </span>
-                    </li>
-                  </ol>
-                </p>
-              </div>
               <div class="d-flex flex-column flex-sm-row justify-content-between my-5">
-                <a href="lesson1.html" class="btn btn-primary">Previous Lesson</a>
-                <a href="#top" class="my-auto">Back to top</a>
-                <a href="lesson3.html" class="btn btn-primary">Next Lesson</a>
+                <a href="lesson1.html"><button class="btn btn-primary px-4 mb-2 mb-lg-0" type="button">Previous Lesson</button></a>
+                <a href="#top" class="my-auto mb-2 mb-lg-0">Back to top</a>
+                <a href="lesson3.html"><button class="btn btn-primary px-4" type="button">Next Lesson</button></a>
               </div>
+
             </div>
           </div>
         </div>
       </div>
     </main>
 
-    <footer class="text-bg-dark">
+
+    <footer class="bg-dark text-bg-dark">
       <div class="container">
-        <div class="py-3">
-          
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-4">
-            <div class="col-6 col-md-2">
-              <h5>Section</h5>
-              <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="home.html" class="nav-link p-0 text-white">Home</a></li>
-                <li class="nav-item mb-2"><a href="about.html" class="nav-link p-0 text-white">About</a></li>
-                <li class="nav-item mb-2"><a href="contact.html" class="nav-link p-0 text-white">Contact</a></li>
-                <li class="nav-item mb-2"><a href="features.html" class="nav-link p-0 text-white">Features</a></li>
-                <li class="nav-item mb-2"><a href="download.html" class="nav-link p-0 text-white">Download</a></li>
-              </ul>
-            </div>
-      
-            <div class="col-md-5 offset-md-1">
-              <form>
-                <h5>Your email address</h5>
-                <div class="flex-column flex-sm-row w-100 gap-2">
-                  <label for="newsletter1" class="visually-hidden">Email address</label>
-                  <input id="newsletter1" type="text" class="form-control mb-2" placeholder="Email address">
-                  <button class="btn btn-success w-100 py-2" type="button">Sign up</button>
-                </div>
-              </form>
-            </div>
-          </div>
-      
-          <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-            <p>For Educational Purposes Only</p>
-            <ul class="list-unstyled d-flex">
-              <li class="ms-3"><a class="link-body-emphasis" href="https://www.facebook.com/" target="_blank"><img src="../images/fb-icon.png" class="img-fluid" width="24" alt="fb icon"></a></li>
-              <li class="ms-3"><a class="link-body-emphasis" href="https://www.twitter.com/" target="_blank"><img src="../images/twitter-icon.png" class="img-fluid" width="24" alt="twitter icon"></a></li>
-              <li class="ms-3"><a class="link-body-emphasis" href="https://www.instagram.com/" target="_blank"><img src="../images/ig-icon.png" class="img-fluid" width="24" alt="ig icon"></a></li>
-              <li class="ms-3"><a class="link-body-emphasis" href="mailto:camilaenverzo12@gmail.com" target="_blank"><img src="../images/gmail-icon.png" class="img-fluid" width="24" alt="gmail icon"></a></li>
-            </ul>
-          </div>
+        <div class="d-flex justify-content-between py-4">
+          <p>For Educational Purposes Only</p>
+          <ul class="list-unstyled d-flex">
+            <li><a href="https://www.facebook.com/" target="_blank"><img src="../images/fb-icon.png" width="24" alt="fb icon"></a></li>
+            <li class="ms-2"><a href="https://www.twitter.com/" target="_blank"><img src="../images/twitter-icon.png" width="24" alt="twitter icon"></a></li>
+            <li class="ms-2"><a href="https://www.instagram.com/" target="_blank"><img src="../images/ig-icon.png" width="24" alt="ig icon"></a></li>
+            <li class="ms-2"><a href="mailto:camilaenverzo12@gmail.com" target="_blank"><img src="../images/gmail-icon.png" width="24" alt="gmail icon"></a></li>
+          </ul>
         </div>
       </div>
     </footer>

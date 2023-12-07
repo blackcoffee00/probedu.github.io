@@ -5,16 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProbEdu | Lesson 1</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
-
     <nav class="navbar navbar-expand-lg px-2 navbar-dark bg-dark fixed-top" aria-label="Fifth navbar example">
       <div class="container-fluid">
         <a class="navbar-brand" href="home.html">
           <img src="../images/logo-white.png" class="img-fluid" width="140" alt="logo">
         </a>
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample05" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -42,277 +41,352 @@
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <input type="image" src="../images/search.png" class="img-fluid my-auto" width="24" alt="search">
           </form>
-          <button class="btn btn-success px-4" type="submit">Sign in</button>
+          <a href="" class="btn btn-success px-4" data-bs-toggle="modal" data-bs-target="#modalSigninForm">Sign in</a>
         </div>
       </div>
     </nav>
 
-    <main class="container-fluid" style="margin-top:80px">
-      <div class="d-flex" id="top">
-          
-        <!-- Side bar -->
-        <div class="px-2" style="width: 170px;">
-          <h5 class="pt-4 text-center">On this Page</h5>
-          <hr>
-          <ul class="nav nav-pills flex-column mb-auto">
-              <li class="nav-item">
-                  <a href="#topic1-1" class="nav-link text-secondary fs-6" aria-current="page">Probability Experiments</a>
-              </li>
-              <li>
-                  <a href="#topic1-2" class="nav-link text-secondary fs-6">Events</a>
-              </li>
-              <li>
-                  <a href="#topic1-3" class="nav-link text-secondary fs-6">Classical Probability</a>
-              </li>
-              <li>
-                  <a href="#topic1-4" class="nav-link text-secondary fs-6">Empirical Probability</a>
-              </li>
-              <li>
-                  <a href="#topic1-5" class="nav-link text-secondary fs-6">Law of Large Numbers</a>
-              </li>
-              <li>
-                  <a href="#topic1-6" class="nav-link text-secondary fs-6">Probabilities with Frequency Distribution</a>
-              </li>
-              <li>
-                  <a href="#topic1-7" class="nav-link text-secondary fs-6">Subjective Probability</a>
-              </li>
-              <li>
-                  <a href="#topic1-8" class="nav-link text-secondary fs-6">Complementary Events</a>
-              </li>
-          </ul>
-        </div>
+    <main>
 
-        <div class="container">
-          <div class="align-items">
-            <!-- Breadcrumbs -->
-            <div class="">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb breadcrumb-chevron rounded-3">
-                        <li class="breadcrumb-item">
-                            <a class="link-body-emphasis" href="home.html"><img src="../images/home-icon.png" width="16" alt=""></a>
-                        </li>
-                        <li class="breadcrumb-item">
-                            <a class="link-body-emphasis fw-semibold text-decoration-none" href="features.html">Features</a>
-                        </li>
-                        <li class="breadcrumb-item">
-                            <a class="link-body-emphasis fw-semibold text-decoration-none" href="lessons.html">Lessons</a>
-                        </li>
-                        <li class="breadcrumb-item active" aria-current="page">Basic Concepts of Probability</li>
-                    </ol>
-                </nav>
+      <!--Sign in Form-->
+      <div class="modal fade p-4 py-md-5" id="modalSigninForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content rounded-4 shadow">
+                <div class="modal-header p-5 pb-4 border-bottom-0">
+                    <h1 class="fw-bold mb-0 fs-2">Sign in</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-5 pt-0">
+                  <form action="">
+                    <div class="form-floating mb-3">
+                      <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
+                      <label for="floatingInput">Email address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
+                      <label for="floatingPassword">Password</label>
+                    </div>
+
+                    <div class="text-center">
+                      <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign in</button>
+                      <a href="" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modalSignupForm">Sign up</a>
+                    </div>
+                  </form>
+                </div>
             </div>
-        
+        </div>
+      </div>
 
-            <!-- Lesson 1 Content -->
-            <div class="container mb-5">
-              <h1>Basic Concepts of Probability</h1>
-              <p id="topic1-1">The <span class="text-primary">probability</span> that an event E will occur is the likelihood it will happen, and is denoted P(E). It is normally represented as a fraction, proportion or a percentage <br> (Note: For most of our calculations, it will be easier to use a fraction or proportion).</p>
-              
-              <!--Probability Experiments-->
-              <h3>Probability Experiments</h3>
-              <p>A <span class="text-primary">probability experiment</span> is an action through which specific results (counts, measurements  or responses) are obtained.</p>
-              <div class="d-flex">
-                <p>
-                  <b>Example:</b><br>
-                  Rolling a die and observing the number that is rolled is a probability experiment.
-                </p>
-                <img class="img-fluid my-auto ms-2" src="../images/dice.png" alt="dice" width="65" height="65">
-              </div>
-              <p>
-                <ul>
-                  <li>The result of a single trial in a probability is the <span class="text-primary">outcome</span>.</li>
-                  <li>The set of all possible outcomes for an experiment is the <span class="text-primary">sample space</span>.</li>
+      <!--Sign up Form-->
+      <div class="modal fade p-4 py-md-5" id="modalSignupForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content rounded-4 shadow">
+                <div class="modal-header p-5 pb-4 border-bottom-0">
+                    <h1 class="fw-bold mb-0 fs-2">Sign up</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-5 pt-0">
+                  <form action="">
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control rounded-3" id="floatingInput" placeholder="Name">
+                      <label for="floatingInput">Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
+                      <label for="floatingInput">Email address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
+                      <label for="floatingPassword">Password</label>
+                    </div>
+
+                    <div class="text-center">
+                      <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign up</button>
+                      <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small><br>
+                      <a href="" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modalSigninForm">Sign in</a>
+                    </div>
+                  </form>
+                </div>
+            </div>
+        </div>
+      </div>
+
+      <div class="fixed-top-margin">
+        <!--Sidebar-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+            <img src="../images/sidebar-menu.png" width="30" alt="">
+        </button>
+
+        <div class="collapse navbar-collapse" id="sidebar">
+            <div class="sidebar-menu overflow-auto bg-white text-bg-light" style="width: 150px;">
+                <h5 class="text-center pt-2">On this Page</h5>
+                <hr>
+                <ul class="list-unstyled flex-column ps-2">
+                    <li class="nav-item">
+                        <a href="#topic1-1" class="nav-link text-secondary fs-6 mb-2" aria-current="page">Probability Experiments</a>
+                    </li>
+                    <li>
+                        <a href="#topic1-2" class="nav-link text-secondary fs-6 mb-2">Events</a>
+                    </li>
+                    <li>
+                        <a href="#topic1-3" class="nav-link text-secondary fs-6 mb-2">Classical Probability</a>
+                    </li>
+                    <li>
+                        <a href="#topic1-4" class="nav-link text-secondary fs-6 mb-2">Empirical Probability</a>
+                    </li>
+                    <li>
+                        <a href="#topic1-5" class="nav-link text-secondary fs-6 mb-2">Law of Large Numbers</a>
+                    </li>
+                    <li>
+                        <a href="#topic1-6" class="nav-link text-secondary fs-6 mb-2">Probabilities with Frequency Distribution</a>
+                    </li>
+                    <li>
+                        <a href="#topic1-7" class="nav-link text-secondary fs-6 mb-2">Subjective Probability</a>
+                    </li>
+                    <li>
+                        <a href="#topic1-8" class="nav-link text-secondary fs-6">Complementary Events</a>
+                    </li>
                 </ul>
-              </p>
-              <div class="mb-4" id="topic1-2">
-                <b>Example:</b><br>
-                The sample space when rolling a die has six outcomes. <br> <span class="text-danger">{1, 2, 3, 4, 5, 6}</span>
-              </div>
-
-              <!--Events-->
-              <h3>Events</h3>
-              <p>An <span class="text-primary">event</span> consists of one or more outcomes and is a subset of the sample space.</p>
-              <div>
-                <p>
-                  <b>Example:</b><br>
-                  A die is rolled. Event <i>A</i> is rolling an even number. <br>
-                  <span class="text-danger">Events are represented by uppercase letters</span>
-                </p>
-              </div>
-              <p>
-                <ul><li>A <span class="text-primary">simple event</span> is an event that consists of a single outcome.</li></ul>
-              </p>
-              <div class="mb-4">
-                <p id="topic1-3">
-                  <b>Example:</b><br>
-                  A die is rolled. Event <i>A</i> is rolling an even number. <br> <span class="text-danger">This is not a simple event because the outcomes of event <i>A</i> are {2, 4, 6}.</span>
-                </p>
-              </div>
-              
-              <!--Classical Probability-->
-              <h3>Classical Probability</h3>
-              <p><span class="text-primary">Classical</span> (or <span class="text-primary">theoretical</span>) <span class="text-primary">probability</span> is used when each outcome in a sample space is equally likely to occur. The classical probability for an event <i>E</i> is given by</p>
-              $$ {P(E) = \frac{Number\:of\:outcomes\:in\:event}{Total\:number\:of\:outcomes\:in\:sample\:space}} $$
-              <div class="mb-4">
-                <p>
-                  <b>Example:</b><br>A die is rolled. Find the probability of Event <i>A</i>: rolling a 5. <br>
-                  <span class="text-danger" id="topic1-4">
-                    There is one outcome in Event <i>A</i>: {5}
-                    $$ {P(A) = \frac{1}{6} \approx 0.167} $$
-                  </span>
-                </p>
-              </div>
-
-              <!--Empirical Probability-->
-              <h3>Empirical Probability</h3>
-              <p><span class="text-primary">Empirical</span> (or <span class="text-primary">statistical</span>) <span class="text-primary">probability</span> is based on observations obtained from probability experiments. The empirical frequency of an event <i>E</i> is the relative frequency of event <i>E</i>.</p>
-              $$ {P(E) = \frac{Frequency\:of\:Event\:E}{Total\:frequency}} $$
-              $$ {P(E) = \frac{f}{n}} $$
-              <div class="mb-4">
-                <p>
-                  <b>Example:</b><br>
-                  A travel agent determines that in every 50 reservations she makes, 12 will be for a cruise. What is the probability that the next reservation she makes will be for a cruise?
-                  <span class="text-danger" id="topic1-5">$$ {P(cruise) = \frac{12}{50} = 0.24}$$</span>
-                </p>
-              </div>
-
-              <!--aw of Large Numbers-->
-              <h3>Law of Large Numbers</h3>
-              <p>As an experiment is repeated over and over, the empirical probability of an event approaches the theoretical (actual) probability of the event.</p>
-              <div class="mb-4">
-                <b id="topic1-6">Example:</b><br>
-                Sally flips coin 20 times and get 3 heads. The empirical probability is \(\frac{3}{20}\). <br>
-                <span class="text-danger">This is not representative of the theoretical probaiblity which is \(\frac{1}{2}\). As the number of times Sally tosses the coin increases, the law of large numbers indicates that the empirical probability will get closer and close to the theoretical probability.</span>
-              </div>
-
-              <!--Probabilities with Frequency Distributions-->
-              <h3>Probabilities with Frequency Distributions</h3>
-              <div class="mb-4">
-                <b>Example:</b><br>
-                The following frequency distribution represents the ages of 30 students in a statistics class. What is the probability that a students is between 26 and 33 years old?
-              </div>
-              <table class="table table-bordered table-reponsive border-dark text-center mt-3 mx-auto" style="width: 400px;">
-                <thead>
-                  <tr>
-                    <th>Ages</th>
-                    <th>Frequency, f</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>18 - 25</td>
-                    <td>13</td>
-                  </tr>
-                  <tr>
-                    <td>26 - 33</td>
-                    <td class="text-danger">8</td>
-                  </tr>
-                  <tr>
-                    <td>34 - 41</td>
-                    <td>4</td>
-                  </tr>
-                  <tr>
-                    <td>42 - 49</td>
-                    <td>3</td>
-                  </tr>
-                  <tr>
-                    <td>50 - 57</td>
-                    <td>2</td>
-                  </tr>
-                  <tr>
-                    <td></td>
-                    <td>\(\sum f = 30\)</td>
-                  </tr>
-                </tbody>
-              </table>
-              <span class="text-danger" id="topic1-7">$$P(age\,26\,to\,33) = \frac{8}{30} \approx 0.267$$</span>
-
-              <!--Subjective Probability-->
-              <h3>Subjective Probability</h3>
-              <p><span class="text-primary">Subjective probability</span> results from intuition, educated guesses, and estimates.</p>
-              <div class="mb-4">
-                <p>
-                  <b>Example:</b><br>
-                  A business analyst predicts that the probability of a certain union going on strike is 0.15.
-                </p>
-              </div>
-              <div class="border border-primary mt-3 mb-4 p-2 mx-auto" style="width: 440px;">
-                <p>
-                  <b>Range of Probabilities Rule</b><br>
-                  The probability of an event <i>E</i> is between 0 and 1, inclusively. That is
-                  $$0 \le P(A) \le 1$$
-                  <div class="text-danger ps-3" id="topic1-8">
-                    0 - Impossible to occur<br>
-                    0.5 - Even chance<br>
-                    1 - Certain to occur
-                  </div>
-                </p>
-              </div>
-
-              <!--Complementary Events-->
-              <h3>Complementary Events</h3>
-              <p>The <span class="text-primary">complementary of Event <i>E</i></span> is the set of all outcomes in the sample space that are not included in event E.<br>(Denoted <i>E'</i> and read "E prime".)</p>
-              $$P(E) + P(E') = 1$$
-              $$P(E) = 1 - P(E')$$
-              $$P(E)' = 1 - P(E)$$
-              <div class="mb-4">
-                <b>Example:</b><br>
-                There are 5 red chips, 4 blue chips, and 6 white chips in a basket. Find the probabiliy of randomly selecting a chip that is not blue.
-                <span class="text-danger">
-                  $$P(selecting\,a\,blue\,chip) = \frac{4}{15} \approx 0.267$$
-                  $$P(not\,selecting\,a\,blue\,chip) = 1 - \frac{4}{15} \\ = \frac{11}{15} \approx 0.733$$
-                </span>
-              </div>
-              <div class="d-flex flex-column flex-sm-row justify-content-between my-5">
-                <a href="#top" class="my-auto">Back to top</a>
-                <a href="lesson2.html" class="btn btn-primary">Next Lesson</a>
-              </div>
             </div>
-          </div>
         </div>
+      </div>
+
+      <div style="margin-top: 80px;">
+          <div class="container">
+
+              <!--Breadcrumbs-->
+              <div aria-label="breadcrumb" id="top">
+                <ol class="breadcrumb breadcrumb-chevron rounded-3">
+                  <li class="breadcrumb-item">
+                    <a class="link-body-emphasis" href="home.html">
+                      <img src="../images/home-icon.png" width="16" alt="">
+                      <span class="visually-hidden">Home</span>
+                    </a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a class="link-body-emphasis fw-semibold text-decoration-none" href="features.html">Features</a>
+                  </li>
+                  <li class="breadcrumb-item">
+                    <a class="link-body-emphasis fw-semibold text-decoration-none" href="lessons.html">Lessons</a>
+                  </li>
+                  <li class="breadcrumb-item active" aria-current="page">Basic Concepts of Probability</li>
+                </ol>
+              </div>
+
+              <!-- Lesson 1 Content -->
+              <div class="my-5 fs-lg-5 fs-sm-6">
+                  <div class=" mb-5">
+                      <h1>Basic Concepts of Probability</h1>
+                      <p id="topic1-1">The <span class="text-primary">probability</span> that an event E will occur is the likelihood it will happen, and is denoted P(E). It is normally represented as a fraction, proportion or a percentage <br> (Note: For most of our calculations, it will be easier to use a fraction or proportion).</p>
+                  </div><hr>
+
+                  <!--Probability Experiments-->
+                  <div class="my-5">
+                      <h3>Probability Experiments</h3>
+                      <p>A <span class="text-primary">probability experiment</span> is an action through which specific results (counts, measurements  or responses) are obtained.</p>
+                      <div class="d-flex">
+                        <p>
+                          <b>Example:</b><br>
+                          Rolling a die and observing the number that is rolled is a probability experiment.
+                        </p>
+                        <div class="ms-lg-3 ms-sm-0"><img class="img-fluid my-auto ms-lg-3 ms-sm-0" src="../images/dice.png" alt="dice" width="65" height="65"></div>
+                      </div>
+                      <p>
+                        <ul>
+                          <li>The result of a single trial in a probability is the <span class="text-primary">outcome</span>.</li>
+                          <li>The set of all possible outcomes for an experiment is the <span class="text-primary">sample space</span>.</li>
+                        </ul>
+                      </p>
+                      <div id="topic1-2">
+                        <b>Example:</b><br>
+                        The sample space when rolling a die has six outcomes.
+                        <div class="text-danger">
+                          $$\{1, 2, 3, 4, 5, 6\}$$
+                        </div>
+                      </div>
+                  </div><hr>
+      
+                  <!--Events-->
+                  <div class="my-5">
+                      <h3>Events</h3>
+                      <p>An <span class="text-primary">event</span> consists of one or more outcomes and is a subset of the sample space.</p>
+                      <div>
+                        <p>
+                          <b>Example:</b><br>
+                          A die is rolled. Event <i>A</i> is rolling an even number. <br>
+                          <span class="text-danger">Events are represented by uppercase letters</span>
+                        </p>
+                      </div>
+                      <p>
+                        <ul><li>A <span class="text-primary">simple event</span> is an event that consists of a single outcome.</li></ul>
+                      </p>
+                      <div class="mb-4">
+                        <p id="topic1-3">
+                          <b>Example:</b><br>
+                          A die is rolled. Event <i>A</i> is rolling an even number. <br> <span class="text-danger">This is not a simple event because the outcomes of event <i>A</i> are {2, 4, 6}.</span>
+                        </p>
+                      </div>
+                    </div><hr>
+                  
+                  <!--Classical Probability-->
+                  <div class="my-5">
+                      <h3>Classical Probability</h3>
+                      <p><span class="text-primary">Classical</span> (or <span class="text-primary">theoretical</span>) <span class="text-primary">probability</span> is used when each outcome in a sample space is equally likely to occur. The classical probability for an event <i>E</i> is given by</p>
+                      <div class="position-relative overflow-auto w-100">
+                        $$P(E) = \frac{Number\:of\:outcomes\:in\:event}{Total\:number\:of\:outcomes\:in\:sample\:space}$$
+                      </div>
+                      <div class="mb-4">
+                        <p>
+                          <b>Example:</b><br>A die is rolled. Find the probability of Event <i>A</i>: rolling a 5. <br>
+                          <span class="text-danger" id="topic1-4">
+                            There is one outcome in Event <i>A</i>: {5}
+                            $$ P(A) = \frac{1}{6} \approx 0.167 $$
+                          </span>
+                        </p>
+                      </div>
+                    </div><hr>
+      
+                  <!--Empirical Probability-->
+                  <div class="my-5">
+                      <h3>Empirical Probability</h3>
+                      <p><span class="text-primary">Empirical</span> (or <span class="text-primary">statistical</span>) <span class="text-primary">probability</span> is based on observations obtained from probability experiments. The empirical frequency of an event <i>E</i> is the relative frequency of event <i>E</i>.</p>
+                      <div class="position-relative overflow-auto w-100">
+                        $$ P(E) = \frac{Frequency\:of\:Event\:E}{Total\:frequency} = \frac{f}{n} $$
+                      </div>
+                      <div class="mb-4">
+                        <p>
+                          <b>Example:</b><br>
+                          A travel agent determines that in every 50 reservations she makes, 12 will be for a cruise. What is the probability that the next reservation she makes will be for a cruise?
+                          <span class="text-danger" id="topic1-5">$$ {P(cruise) = \frac{12}{50} = 0.24}$$</span>
+                        </p>
+                      </div>
+                    </div><hr>
+      
+                  <!--Law of Large Numbers-->
+                  <div class="my-5">
+                      <h3>Law of Large Numbers</h3>
+                      <p>As an experiment is repeated over and over, the empirical probability of an event approaches the theoretical (actual) probability of the event.</p>
+                      <div class="mb-4">
+                        <b id="topic1-6">Example:</b><br>
+                        Sally flips coin 20 times and get 3 heads. The empirical probability is \(\frac{3}{20}\). <br>
+                        <span class="text-danger">This is not representative of the theoretical probaiblity which is \(\frac{1}{2}\). As the number of times Sally tosses the coin increases, the law of large numbers indicates that the empirical probability will get closer and close to the theoretical probability.</span>
+                      </div>
+                    </div><hr>
+      
+                  <!--Probabilities with Frequency Distributions-->
+                  <div class="my-5">
+                      <h3>Probabilities with Frequency Distributions</h3>
+                      <div class="mb-4">
+                        <b>Example:</b><br>
+                        The following frequency distribution represents the ages of 30 students in a statistics class. What is the probability that a students is between 26 and 33 years old?
+                      </div>
+                      <div class="table-responsive-sm mt-3 mx-auto" style="max-width: 500px;">
+                        <table class="table table-bordered border-dark text-center">
+                          <thead>
+                            <tr>
+                              <th>Ages</th>
+                              <th>Frequency, f</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>18 - 25</td>
+                              <td>13</td>
+                            </tr>
+                            <tr>
+                              <td>26 - 33</td>
+                              <td class="text-danger">8</td>
+                            </tr>
+                            <tr>
+                              <td>34 - 41</td>
+                              <td>4</td>
+                            </tr>
+                            <tr>
+                              <td>42 - 49</td>
+                              <td>3</td>
+                            </tr>
+                            <tr>
+                              <td>50 - 57</td>
+                              <td>2</td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                              <td>\(\sum f = 30\)</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="position-relative overflow-auto w-100 text-danger" id="topic1-7">$$ P(age\,26\,to\,33) = \frac{8}{30} \approx 0.267 $$</div>
+                  </div><hr>
+      
+                  <!--Subjective Probability-->
+                  <div class="my-5">
+                      <h3>Subjective Probability</h3>
+                      <p><span class="text-primary">Subjective probability</span> results from intuition, educated guesses, and estimates.</p>
+                      <div class="mb-4">
+                        <p>
+                          <b>Example:</b><br>
+                          A business analyst predicts that the probability of a certain union going on strike is 0.15.
+                        </p>
+                      </div>
+                      <div class="border border-primary border-responsive-sm mt-3 mb-4 p-2 mx-auto" style="max-width: 700px;">
+                        <p>
+                          <b>Range of Probabilities Rule</b><br>
+                          The probability of an event <i>E</i> is between 0 and 1, inclusively. That is
+                          $$ 0 \le P(A) \le 1 $$
+                          <div class="text-danger ps-3" id="topic1-8">
+                            0 - Impossible to occur<br>
+                            0.5 - Even chance<br>
+                            1 - Certain to occur
+                          </div>
+                        </p>
+                      </div>
+                  </div><hr>
+      
+                  <!--Complementary Events-->
+                  <div class="my-5">
+                      <h3>Complementary Events</h3>
+                      <p>The <span class="text-primary">complementary of Event <i>E</i></span> is the set of all outcomes in the sample space that are not included in event E.<br>(Denoted <i>E'</i> and read "E prime".)</p>
+                      $$P(E) + P(E') = 1$$
+                      $$P(E) = 1 - P(E')$$
+                      $$P(E)' = 1 - P(E)$$
+                      <div class="mb-4">
+                        <b>Example:</b><br>
+                        There are 5 red chips, 4 blue chips, and 6 white chips in a basket. Find the probabiliy of randomly selecting a chip that is not blue.
+                        <span class="text-danger">
+                          <div class="position-relative overflow-auto w-100">
+                            $$P(selecting\,a\,blue\,chip) = \frac{4}{15} \approx 0.267$$
+                            $$P(not\,selecting\,a\,blue\,chip) = 1 - \frac{4}{15} = \frac{11}{15} \approx 0.733$$
+                          </div>
+                        </span>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="d-flex justify-content-between my-5">
+                <a href="#top" class="my-auto mb-2 mb-lg-0">Back to top</a>
+                <a href="lesson2.html"><button class="btn btn-primary px-4" type="button">Next Lesson</button></a>
+              </div>
+
+          </div>
       </div>
   </main>
-  
 
-  <footer class="text-bg-dark">
+  <footer class="bg-dark text-bg-dark">
     <div class="container">
-        <div class="py-3">
-          
-          <div class="d-flex flex-column flex-sm-row justify-content-between pt-4">
-            <div class="col-6 col-md-2">
-              <h5>Section</h5>
-              <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="home.html" class="nav-link p-0 text-white">Home</a></li>
-                <li class="nav-item mb-2"><a href="about.html" class="nav-link p-0 text-white">About</a></li>
-                <li class="nav-item mb-2"><a href="contact.html" class="nav-link p-0 text-white">Contact</a></li>
-                <li class="nav-item mb-2"><a href="features.html" class="nav-link p-0 text-white">Features</a></li>
-                <li class="nav-item mb-2"><a href="download.html" class="nav-link p-0 text-white">Download</a></li>
-              </ul>
-            </div>
-      
-            <div class="col-md-5 offset-md-1">
-              <form>
-                <h5>Your email address</h5>
-                <div class="flex-column flex-sm-row w-100 gap-2">
-                  <label for="newsletter1" class="visually-hidden">Email address</label>
-                  <input id="newsletter1" type="text" class="form-control mb-2" placeholder="Email address">
-                  <button class="btn btn-success w-100 py-2" type="button">Sign up</button>
-                </div>
-              </form>
-            </div>
-          </div>
-      
-          <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-            <p>For Educational Purposes Only</p>
-            <ul class="list-unstyled d-flex">
-              <li class="ms-3"><a class="link-body-emphasis" href="https://www.facebook.com/" target="_blank"><img src="../images/fb-icon.png" class="img-fluid" width="24" alt="fb icon"></a></li>
-              <li class="ms-3"><a class="link-body-emphasis" href="https://www.twitter.com/" target="_blank"><img src="../images/twitter-icon.png" class="img-fluid" width="24" alt="twitter icon"></a></li>
-              <li class="ms-3"><a class="link-body-emphasis" href="https://www.instagram.com/" target="_blank"><img src="../images/ig-icon.png" class="img-fluid" width="24" alt="ig icon"></a></li>
-              <li class="ms-3"><a class="link-body-emphasis" href="mailto:camilaenverzo12@gmail.com" target="_blank"><img src="../images/gmail-icon.png" class="img-fluid" width="24" alt="gmail icon"></a></li>
-            </ul>
-          </div>
+      <div class="d-flex justify-content-between py-4">
+        <p>For Educational Purposes Only</p>
+        <ul class="list-unstyled d-flex">
+          <li><a href="https://www.facebook.com/" target="_blank"><img src="../images/fb-icon.png" width="24" alt="fb icon"></a></li>
+          <li class="ms-2"><a href="https://www.twitter.com/" target="_blank"><img src="../images/twitter-icon.png" width="24" alt="twitter icon"></a></li>
+          <li class="ms-2"><a href="https://www.instagram.com/" target="_blank"><img src="../images/ig-icon.png" width="24" alt="ig icon"></a></li>
+          <li class="ms-2"><a href="mailto:camilaenverzo12@gmail.com" target="_blank"><img src="../images/gmail-icon.png" width="24" alt="gmail icon"></a></li>
+        </ul>
       </div>
+    </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
 </body>
 </html>

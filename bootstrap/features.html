@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProbEdu | Features</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
@@ -48,74 +49,73 @@
 
     <main>
       <!--Sign in Form-->
-      <div class="modal fade" id="modalSigninForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal fade p-4 py-md-5" id="modalSigninForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header text-center">
-                    <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+            <div class="modal-content rounded-4 shadow">
+                <div class="modal-header p-5 pb-4 border-bottom-0">
+                    <h1 class="fw-bold mb-0 fs-2">Sign in</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <div class="md-form mb-4">
-                        <input type="email" id="defaultForm-email" class="form-control validate" placeholder="Your email">
+                <div class="modal-body p-5 pt-0">
+                  <form action="">
+                    <div class="form-floating mb-3">
+                      <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
+                      <label for="floatingInput">Email address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
+                      <label for="floatingPassword">Password</label>
                     </div>
 
-                    <div class="md-form">
-                        <input type="password" id="defaultForm-pass" class="form-control validate" placeholder="Your password">
+                    <div class="text-center">
+                      <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign in</button>
+                      <a href="" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modalSignupForm">Sign up</a>
                     </div>
-
-                </div>
-                <div class="modal-footer">
-                    <div class="col-lg-4 mx-auto">
-                        <div class="d-grid gap-2">
-                          <button class="btn btn-primary" type="button">Sign in</button>
-                          <a href="" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modalSignupForm">Sign up</a>
-                        </div>
-                      </div>
+                  </form>
                 </div>
             </div>
         </div>
       </div>
 
       <!--Sign up Form-->
-      <div class="modal fade" id="modalSignupForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal fade p-4 py-md-5" id="modalSignupForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header text-center">
-                    <h4 class="modal-title w-100 font-weight-bold">Sign up</h4>
+            <div class="modal-content rounded-4 shadow">
+                <div class="modal-header p-5 pb-4 border-bottom-0">
+                    <h1 class="fw-bold mb-0 fs-2">Sign up</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <div class="md-form mb-4">
-                        <input type="email" id="defaultForm-email" class="form-control validate" placeholder="Your name">
+                <div class="modal-body p-5 pt-0">
+                  <form action="">
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control rounded-3" id="floatingInput" placeholder="Name">
+                      <label for="floatingInput">Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
+                      <label for="floatingInput">Email address</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
+                      <label for="floatingPassword">Password</label>
                     </div>
 
-                    <div class="md-form mb-4">
-                        <input type="password" id="defaultForm-pass" class="form-control validate" placeholder="Your email">
+                    <div class="text-center">
+                      <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign up</button>
+                      <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small><br>
+                      <a href="" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modalSigninForm">Sign in</a>
                     </div>
-
-                    <div class="md-form">
-                      <input type="password" id="defaultForm-pass" class="form-control validate" placeholder="Your password">
-                  </div>
-
-                </div>
-                <div class="modal-footer">
-                    <div class="col-lg-4 mx-auto">
-                        <div class="d-grid gap-2">
-                          <button class="btn btn-primary" type="button">Sign up</button>
-                          <a href="" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modalSigninForm">Sign in</a>
-                        </div>
-                      </div>
+                  </form>
                 </div>
             </div>
         </div>
       </div>
 
-      <div class="py-5">
+      <div class="pb-5" style="margin-top: 80px;">
+        <div class="container">
 
         <!--Breadcrumbs-->
-        <div class="ps-4 py-4">
-          <nav aria-label="breadcrumb">
+          <div aria-label="breadcrumb">
             <ol class="breadcrumb breadcrumb-chevron rounded-3">
               <li class="breadcrumb-item">
                 <a class="link-body-emphasis" href="home.html">
@@ -127,15 +127,13 @@
                 Features
               </li>
             </ol>
-          </nav>
-        </div>
+          </div>
 
         <!--Card-->
-        <div class="container">
-          <h1 class="mb-5 pb-2 border-bottom">Features</h1>
+          <h1 class="my-5 pb-2 border-bottom">Features</h1>
           <div class="row row-cols-1 row-cols-sm-2 g-4">
             <div class="col">
-              <div class="card mb-4">
+              <div class="card h-100 mb-4">
                 <img src="../images/study.png" class="card-img-top mx-auto d-block img-fluid pt-3" alt="lesson" style="width: 150px;">
                 <div class="card-body">
                   <h5 class="card-title">Lessons</h5>
@@ -145,7 +143,7 @@
               </div>
             </div>
             <div class="col">
-              <div class="card">
+              <div class="card h-100">
                 <img src="../images/quiz2.png" class="card-img-top mx-auto d-block img-fluid pt-3" alt="quiz" style="width: 150px;">
                 <div class="card-body">
                   <h5 class="card-title">Quizzes</h5>
@@ -160,47 +158,20 @@
       </div>
     </main>
 
-    <footer class="text-bg-dark">
+    <footer class="bg-dark text-bg-dark">
       <div class="container">
-          <div class="py-3">
-            
-            <div class="d-flex flex-column flex-sm-row justify-content-between pt-4">
-              <div class="col-6 col-md-2">
-                <h5>Section</h5>
-                <ul class="nav flex-column">
-                  <li class="nav-item mb-2"><a href="home.html" class="nav-link p-0 text-white">Home</a></li>
-                  <li class="nav-item mb-2"><a href="about.html" class="nav-link p-0 text-white">About</a></li>
-                  <li class="nav-item mb-2"><a href="contact.html" class="nav-link p-0 text-white">Contact</a></li>
-                  <li class="nav-item mb-2"><a href="features.html" class="nav-link p-0 text-white">Features</a></li>
-                  <li class="nav-item mb-2"><a href="download.html" class="nav-link p-0 text-white">Download</a></li>
-                </ul>
-              </div>
-        
-              <div class="col-md-5 offset-md-1">
-                <form>
-                  <h5>Your email address</h5>
-                  <div class="flex-column flex-sm-row w-100 gap-2">
-                    <label for="newsletter1" class="visually-hidden">Email address</label>
-                    <input id="newsletter1" type="text" class="form-control mb-2" placeholder="Email address">
-                    <button class="btn btn-success w-100 py-2" type="button">Sign up</button>
-                  </div>
-                </form>
-              </div>
-            </div>
-        
-            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-              <p>For Educational Purposes Only</p>
-              <ul class="list-unstyled d-flex">
-                <li class="ms-3"><a class="link-body-emphasis" href="https://www.facebook.com/" target="_blank"><img src="../images/fb-icon.png" class="img-fluid" width="24" alt="fb icon"></a></li>
-                <li class="ms-3"><a class="link-body-emphasis" href="https://www.twitter.com/" target="_blank"><img src="../images/twitter-icon.png" class="img-fluid" width="24" alt="twitter icon"></a></li>
-                <li class="ms-3"><a class="link-body-emphasis" href="https://www.instagram.com/" target="_blank"><img src="../images/ig-icon.png" class="img-fluid" width="24" alt="ig icon"></a></li>
-                <li class="ms-3"><a class="link-body-emphasis" href="mailto:camilaenverzo12@gmail.com" target="_blank"><img src="../images/gmail-icon.png" class="img-fluid" width="24" alt="gmail icon"></a></li>
-              </ul>
-            </div>
-            
-          </div>
+        <div class="d-flex justify-content-between py-4">
+          <p>For Educational Purposes Only</p>
+          <ul class="list-unstyled d-flex">
+            <li><a href="https://www.facebook.com/" target="_blank"><img src="../images/fb-icon.png" width="24" alt="fb icon"></a></li>
+            <li class="ms-2"><a href="https://www.twitter.com/" target="_blank"><img src="../images/twitter-icon.png" width="24" alt="twitter icon"></a></li>
+            <li class="ms-2"><a href="https://www.instagram.com/" target="_blank"><img src="../images/ig-icon.png" width="24" alt="ig icon"></a></li>
+            <li class="ms-2"><a href="mailto:camilaenverzo12@gmail.com" target="_blank"><img src="../images/gmail-icon.png" width="24" alt="gmail icon"></a></li>
+          </ul>
+        </div>
       </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
