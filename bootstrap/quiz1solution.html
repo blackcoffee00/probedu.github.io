@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ProbEdu | Quiz 1</title>
+    <title>ProbEdu | Quiz 1 Solution</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
@@ -112,8 +112,7 @@
       <!--Quiz-->
       <div class="container">
         <form id="quizForm" class="my-5 fs-5 fs-sm-6">
-          <h1 class="text-center mb-4">Basic Concepts of Probability Quiz</h1>
-          <p class="mb-5">Welcome to the asic Concepts of Probability Quiz! Please carefully read each question and select the best answer from the multiple-choice options. Choose only one answer per question and proceed to the next one. Take your time, there's no time limit. After answering all 10 questions, review your responses. Good luck!</p>
+          <h1 class="text-center mb-5">Basic Concepts of Probability Quiz Solution</h1>
           <ol class="mx-lg-5 mx-sm-0">
 
             <!--1-->
@@ -121,7 +120,7 @@
               <div class="mb-2">If you flip a fair coin three times, what is the probability of getting exactly two heads?</div>
               <div class="border rounded p-2 mb-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item1" id="option11" value="A">
+                  <input class="form-check-input" type="radio" name="quiz1item1" id="option11" value="A" disabled>
                   <label class="form-check-label" for="option11">
                     A. \(\frac{1}{4}\)
                   </label>
@@ -129,7 +128,7 @@
               </div>
               <div class="border rounded p-2 mb-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item1" id="option12" value="B">
+                  <input class="form-check-input" type="radio" name="quiz1item1" id="option12" value="B" checked disabled>
                   <label class="form-check-label" for="option12">
                     B. \(\frac{3}{8}\)
                   </label>
@@ -137,7 +136,7 @@
               </div>
               <div class="border rounded p-2 mb-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item1" id="option13" value="C">
+                  <input class="form-check-input" type="radio" name="quiz1item1" id="option13" value="C" disabled>
                   <label class="form-check-label" for="option13">
                     C. \(\frac{1}{2}\)
                   </label>
@@ -145,12 +144,13 @@
               </div>
               <div class="border rounded p-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item1" id="option14" value="D">
+                  <input class="form-check-input" type="radio" name="quiz1item1" id="option14" value="D" disabled>
                   <label class="form-check-label" for="option14">
                     D. \(\frac{1}{8}\)
                   </label>
                 </div>
               </div>
+              <div class="mb-2 text-danger">When flipping a fair coin three times, the possible outcomes are 2^3 = 8. The ways to get exactly two heads are HHT, HTH, and THH. So, the probability is 3/8.</div>
             </li>
             
             <!--2-->
@@ -158,7 +158,7 @@
               <div class="mb-2">If a month is picked at random, what is the probability that the month will start with M?</div>
               <div class="border rounded p-2 mb-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item2" id="option21" value="A">
+                  <input class="form-check-input" type="radio" name="quiz1item2" id="option21" value="A" disabled>
                   <label class="form-check-label" for="option21">
                     A. \(\frac{1}{12}\)
                   </label>
@@ -166,7 +166,7 @@
               </div>
               <div class="border rounded p-2 mb-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item2" id="option22" value="B">
+                  <input class="form-check-input" type="radio" name="quiz1item2" id="option22" value="B" checked disabled>
                   <label class="form-check-label" for="option22">
                     B. \(\frac{1}{6}\)
                   </label>
@@ -174,7 +174,7 @@
               </div>
               <div class="border rounded p-2 mb-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item2" id="option23" value="C">
+                  <input class="form-check-input" type="radio" name="quiz1item2" id="option23" value="C" disabled>
                   <label class="form-check-label" for="option23">
                     C. \(\frac{2}{6}\)
                   </label>
@@ -182,12 +182,13 @@
               </div>
               <div class="border rounded p-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item2" id="option24" value="D">
+                  <input class="form-check-input" type="radio" name="quiz1item2" id="option24" value="D" disabled>
                   <label class="form-check-label" for="option24">
                     D. \(\frac{4}{12}\)
                   </label>
                 </div>
               </div>
+              <div class="mb-2 text-danger">The probability that a month will start with M is 1 out of 6 because there are 12 months in a year and only 2 of them start with the letter M (March and May). Therefore, the probability is 1/6.</div>
             </li>
 
             <!--3-->
@@ -195,7 +196,7 @@
               <div class="mb-2">When you roll a pair of dice, how many outcomes are there?</div>
               <div class="border rounded p-2 mb-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item3" id="option31" value="A">
+                  <input class="form-check-input" type="radio" name="quiz1item3" id="option31" value="A" disabled>
                   <label class="form-check-label" for="option31">
                     A. \(6\)
                   </label>
@@ -203,7 +204,7 @@
               </div>
               <div class="border rounded p-2 mb-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item3" id="option32" value="B">
+                  <input class="form-check-input" type="radio" name="quiz1item3" id="option32" value="B" disabled>
                   <label class="form-check-label" for="option32">
                     B. \(12\)
                   </label>
@@ -211,7 +212,7 @@
               </div>
               <div class="border rounded p-2 mb-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item3" id="option33" value="C">
+                  <input class="form-check-input" type="radio" name="quiz1item3" id="option33" value="C" checked disabled>
                   <label class="form-check-label" for="option33">
                     C. \(36\)
                   </label>
@@ -219,12 +220,13 @@
               </div>
               <div class="border rounded p-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item3" id="option34" value="D">
+                  <input class="form-check-input" type="radio" name="quiz1item3" id="option34" value="D" disabled>
                   <label class="form-check-label" for="option34">
                     D. \(24\)
                   </label>
                 </div>
               </div>
+              <div class="mb-2 text-danger">When rolling a pair of six-sided dice, there are 36 possible outcomes.</div>
             </li>
 
             <!--4-->
@@ -232,7 +234,7 @@
               <div class="mb-2">A bag contains 4 red balls and 6 blue balls. What is the probability of drawing a red ball?</div>
               <div class="border rounded p-2 mb-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item4" id="option41" value="A">
+                  <input class="form-check-input" type="radio" name="quiz1item4" id="option41" value="A" checked disabled>
                   <label class="form-check-label" for="option41">
                     A. \(\frac{2}{5}\)
                   </label>
@@ -240,7 +242,7 @@
               </div>
               <div class="border rounded p-2 mb-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item4" id="option42" value="B">
+                  <input class="form-check-input" type="radio" name="quiz1item4" id="option42" value="B" disabled>
                   <label class="form-check-label" for="option42">
                     B. \(\frac{3}{5}\)
                   </label>
@@ -248,7 +250,7 @@
               </div>
               <div class="border rounded p-2 mb-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item4" id="option43" value="C">
+                  <input class="form-check-input" type="radio" name="quiz1item4" id="option43" value="C" disabled>
                   <label class="form-check-label" for="option43">
                     C. \(\frac{1}{4}\)
                   </label>
@@ -256,12 +258,13 @@
               </div>
               <div class="border rounded p-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item4" id="option44" value="D">
+                  <input class="form-check-input" type="radio" name="quiz1item4" id="option44" value="D" disabled>
                   <label class="form-check-label" for="option44">
                     D. \(\frac{2}{3}\)
                   </label>
                 </div>
               </div>
+              <div class="mb-2 text-danger">The probability of drawing a red ball is the number of red balls (4) divided by the total number of balls (4 + 6 = 10). So, the probability is 4/10, which simplifies to 2/5.</div>
             </li>
 
             <!--5-->
@@ -269,7 +272,7 @@
               <div class="mb-2">What is the probability of rolling an even number on a six-sided die?</div>
               <div class="border rounded p-2 mb-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item5" id="option51" value="A">
+                  <input class="form-check-input" type="radio" name="quiz1item5" id="option51" value="A" disabled>
                   <label class="form-check-label" for="option51">
                     A. \(\frac{1}{6}\)
                   </label>
@@ -277,7 +280,7 @@
               </div>
               <div class="border rounded p-2 mb-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item5" id="option52" value="B">
+                  <input class="form-check-input" type="radio" name="quiz1item5" id="option52" value="B" checked disabled>
                   <label class="form-check-label" for="option52">
                     B. \(\frac{1}{2}\)
                   </label>
@@ -285,7 +288,7 @@
               </div>
               <div class="border rounded p-2 mb-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item5" id="option53" value="C">
+                  <input class="form-check-input" type="radio" name="quiz1item5" id="option53" value="C" disabled>
                   <label class="form-check-label" for="option53">
                     C. \(\frac{2}{3}\)
                   </label>
@@ -293,12 +296,13 @@
               </div>
               <div class="border rounded p-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item5" id="option54" value="D">
+                  <input class="form-check-input" type="radio" name="quiz1item5" id="option54" value="D" disabled>
                   <label class="form-check-label" for="option54">
                     D. \(\frac{1}{3}\)
                   </label>
                 </div>
               </div>
+              <div class="mb-2 text-danger">The die has 3 even numbers (2, 4, 6) out of a total of 6 possible outcomes (1, 2, 3, 4, 5, 6). Therefore, the probability is 3/6, which simplifies to 1/2.</div>
             </li>
 
             <!--6-->
@@ -306,7 +310,7 @@
               <div class="mb-2">A spinner has 8 equal sections, numbered 1 through 8. What is the probability of landing on an even number?</div>
               <div class="border rounded p-2 mb-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item6" id="option61" value="A">
+                  <input class="form-check-input" type="radio" name="quiz1item6" id="option61" value="A" checked disabled>
                   <label class="form-check-label" for="option61">
                     A. \(\frac{1}{2}\)
                   </label>
@@ -314,7 +318,7 @@
               </div>
               <div class="border rounded p-2 mb-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item6" id="option62" value="B">
+                  <input class="form-check-input" type="radio" name="quiz1item6" id="option62" value="B" disabled>
                   <label class="form-check-label" for="option62">
                     B. \(\frac{1}{8}\)
                   </label>
@@ -322,7 +326,7 @@
               </div>
               <div class="border rounded p-2 mb-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item6" id="option63" value="C">
+                  <input class="form-check-input" type="radio" name="quiz1item6" id="option63" value="C" disabled>
                   <label class="form-check-label" for="option63">
                     C. \(\frac{1}{4}\)
                   </label>
@@ -330,12 +334,13 @@
               </div>
               <div class="border rounded p-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item6" id="option64" value="D">
+                  <input class="form-check-input" type="radio" name="quiz1item6" id="option64" value="D" disabled>
                   <label class="form-check-label" for="option64">
                     D. \(\frac{3}{8}\)
                   </label>
                 </div>
               </div>
+              <div class="mb-2 text-danger">Half of the sections on the spinner are even numbers (2, 4, 6, 8) out of a total of 8 sections. So, the probability is 4/8, which simplifies to 1/2.</div>
             </li>
 
             <!--7-->
@@ -343,7 +348,7 @@
               <div class="mb-2">If you draw a card from a standard deck of 52 cards, what is the probability of drawing a spade?</div>
               <div class="border rounded p-2 mb-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item7" id="option71" value="A">
+                  <input class="form-check-input" type="radio" name="quiz1item7" id="option71" value="A" disabled>
                   <label class="form-check-label" for="option71">
                     A. \(\frac{1}{13}\)
                   </label>
@@ -351,7 +356,7 @@
               </div>
               <div class="border rounded p-2 mb-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item7" id="option72" value="B">
+                  <input class="form-check-input" type="radio" name="quiz1item7" id="option72" value="B" checked disabled>
                   <label class="form-check-label" for="option72">
                     B. \(\frac{1}{4}\)
                   </label>
@@ -359,7 +364,7 @@
               </div>
               <div class="border rounded p-2 mb-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item7" id="option73" value="C">
+                  <input class="form-check-input" type="radio" name="quiz1item7" id="option73" value="C" disabled>
                   <label class="form-check-label" for="option73">
                     C. \(\frac{1}{52}\)
                   </label>
@@ -367,12 +372,13 @@
               </div>
               <div class="border rounded p-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item7" id="option74" value="D">
+                  <input class="form-check-input" type="radio" name="quiz1item7" id="option74" value="D" disabled>
                   <label class="form-check-label" for="option74">
                     D. \(\frac{1}{2}\)
                   </label>
                 </div>
               </div>
+              <div class="mb-2 text-danger">There are 13 spades in a standard deck of 52 cards. So, the probability of drawing a spade is 13/52, which simplifies to 1/4.</div>
             </li>
 
             <!--8-->
@@ -380,7 +386,7 @@
               <div class="mb-2">If the probability of an event A is 0.3, what is the probability of the complement of A?</div>
               <div class="border rounded p-2 mb-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item8" id="option81" value="A">
+                  <input class="form-check-input" type="radio" name="quiz1item8" id="option81" value="A" checked disabled>
                   <label class="form-check-label" for="option81">
                     A. \(0.7\)
                   </label>
@@ -388,7 +394,7 @@
               </div>
               <div class="border rounded p-2 mb-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item8" id="option82" value="B">
+                  <input class="form-check-input" type="radio" name="quiz1item8" id="option82" value="B" disabled>
                   <label class="form-check-label" for="option82">
                     B. \(0.3\)
                   </label>
@@ -396,7 +402,7 @@
               </div>
               <div class="border rounded p-2 mb-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item8" id="option83" value="C">
+                  <input class="form-check-input" type="radio" name="quiz1item8" id="option83" value="C" disabled>
                   <label class="form-check-label" for="option83">
                     C. \(0.5\)
                   </label>
@@ -404,12 +410,13 @@
               </div>
               <div class="border rounded p-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item8" id="option84" value="D">
+                  <input class="form-check-input" type="radio" name="quiz1item8" id="option84" value="D" disabled>
                   <label class="form-check-label" for="option84">
                     D. \(1.0\)
                   </label>
                 </div>
               </div>
+              <div class="mb-2 text-danger">The complement of an event is 1 minus the probability of the event. In this case, the complement of A is 1 - 0.3 = 0.7.</div>
             </li>
 
             <!--9-->
@@ -417,7 +424,7 @@
               <div class="mb-2">If you draw two cards from a deck without replacement, what is the probability that both cards are hearts?</div>
               <div class="border rounded p-2 mb-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item9" id="option91" value="A">
+                  <input class="form-check-input" type="radio" name="quiz1item9" id="option91" value="A" disabled>
                   <label class="form-check-label" for="option91">
                     A. \(\frac{1}{26}\)
                   </label>
@@ -425,7 +432,7 @@
               </div>
               <div class="border rounded p-2 mb-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item9" id="option92" value="B">
+                  <input class="form-check-input" type="radio" name="quiz1item9" id="option92" value="B" disabled>
                   <label class="form-check-label" for="option92">
                     B. \(\frac{1}{13}\)
                   </label>
@@ -433,7 +440,7 @@
               </div>
               <div class="border rounded p-2 mb-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item9" id="option93" value="C">
+                  <input class="form-check-input" type="radio" name="quiz1item9" id="option93" value="C" checked disabled>
                   <label class="form-check-label" for="option93">
                     C. \(\frac{1}{17}\)
                   </label>
@@ -441,12 +448,13 @@
               </div>
               <div class="border rounded p-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item9" id="option94" value="D">
+                  <input class="form-check-input" type="radio" name="quiz1item9" id="option94" value="D" disabled>
                   <label class="form-check-label" for="option94">
                     D. \(\frac{1}{221}\)
                   </label>
                 </div>
               </div>
+              <div class="mb-2 text-danger">When drawing two cards without replacement, the probability of both events happening is the product of their individual probabilities. The probability of the first card being a heart is 13/52, and the probability of the second card being a heart is 12/51. Multiplying these gives 156/2652, which simplifies to 1/17.</div>
             </li>
 
             <!--10-->
@@ -454,7 +462,7 @@
               <div class="mb-2">If the probability of rain tomorrow is 0.6 and the probability of not raining is 0.4, what is the probability of either raining or not raining?</div>
               <div class="border rounded p-2 mb-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item10" id="option101" value="A">
+                  <input class="form-check-input" type="radio" name="quiz1item10" id="option101" value="A" checked disabled>
                   <label class="form-check-label" for="option101">
                     A. \(1.0\)
                   </label>
@@ -462,7 +470,7 @@
               </div>
               <div class="border rounded p-2 mb-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item10" id="option102" value="B">
+                  <input class="form-check-input" type="radio" name="quiz1item10" id="option102" value="B" disabled>
                   <label class="form-check-label" for="option102">
                     B. \(0.1\)
                   </label>
@@ -470,7 +478,7 @@
               </div>
               <div class="border rounded p-2 mb-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item10" id="option103" value="C">
+                  <input class="form-check-input" type="radio" name="quiz1item10" id="option103" value="C" disabled>
                   <label class="form-check-label" for="option103">
                     C. \(0.8\)
                   </label>
@@ -478,75 +486,17 @@
               </div>
               <div class="border rounded p-2">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="quiz1item10" id="option104" value="D">
+                  <input class="form-check-input" type="radio" name="quiz1item10" id="option104" value="D" disabled>
                   <label class="form-check-label" for="option104">
                     D. \(0.6\)
                   </label>
                 </div>
               </div>
+              <div class="mb-2 text-danger">The probability of raining plus the probability of not raining must equal 1.0. So, 0.6 (rain) + 0.4 (not raining) = 1.0.</div>
             </li>
           </ol>
-          <div class="d-flex justify-content-center py-5">
-            <button class="btn btn-primary px-5" type="button" data-bs-toggle="modal" data-bs-target="#popupScoreQuiz1" onclick="submitAnswer()">Submit</button>
-          </div>
         </form>
       </div>
-
-      <!-- Popup Score -->
-      <div class="modal fade p-4 py-md-5" id="popupScoreQuiz1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content rounded-4 shadow">
-            <div class="modal-header p-5 pb-4 border-bottom-0">
-              <h2 class="modal-title fw-bold mb-0 mx-auto">Your Score:</h2>
-            </div>
-            <div class="modal-body pt-0 text-center">
-              <span id="myResultsQuiz1" class="text-success my-results fs-1"></span>
-            </div>
-            <div class="modal-footer justify-content-between">
-              <a href="quiz1.html"><button class="px-md-5 px-sm-0 mb-2 btn btn-lg rounded-3 btn-primary" data-bs-dismiss="modal" type="button">Restart</button></a>
-              <a href="quiz1solution.html"><button class="px-md-5 px-sm-0 mb-2 btn btn-lg rounded-3 btn-primary" data-bs-dismiss="modal" type="button">Solution</button></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- JavaScript -->
-      <script>
-        var correctAnswers = ["B", "B", "C", "A", "B", "A", "B", "A", "C", "A"];
-        var totalQuestions = correctAnswers.length;
-
-        function getCheckedValue(questionNumber) {
-            var radios = document.getElementsByName("quiz1item" + questionNumber);
-            for (var i = 0; i < radios.length; i++) {
-                if (radios[i].checked) {
-                    return radios[i].value;
-                }
-            }
-            return null;
-        }
-
-        function calculateScore() {
-            var score = 0;
-            for (var i = 1; i <= totalQuestions; i++) {
-                var selectedAnswer = getCheckedValue(i);
-                if (selectedAnswer === correctAnswers[i - 1]) {
-                    score += 1;
-                }
-            }
-            return score;
-        }
-
-        function submitAnswer() {
-            var score = calculateScore();
-            var resultElement = document.getElementById("myResultsQuiz1");
-            if (score !== null) {
-                resultElement.innerHTML = score;
-                if (score > 4) {
-                    resultElement.innerHTML += "<br>Congratulations!";
-                }
-            }
-        }
-      </script>
     </main>
 
     <footer class="bg-dark text-bg-dark">

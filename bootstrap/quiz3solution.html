@@ -111,14 +111,14 @@
       <!--Quiz-->
       <div class="container">
           <form class="my-5 fs-5 fs-sm-6">
-              <h1 class="text-center mb-4">Addition Rule Quiz</h1>
-              <p class="mb-5">Welcome to the Addition Rule Quiz! Please carefully read each question and select the best answer from the multiple-choice options. Choose only one answer per question and proceed to the next one. Take your time, there's no time limit. After answering all 10 questions, review your responses. Good luck!</p>
+              <h1 class="text-center mb-4">Addition Rule Quiz Solution</h1>
               <ol class="mx-lg-5 mx-sm-0">
+                
                 <li class="mb-4">
                   <div class="mb-2">In a deck of cards, what is the probability of drawing either a spade or a heart?</div>
                   <div class="border rounded p-2 mb-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item1" id="option11" value="A">
+                      <input class="form-check-input" type="radio" name="quiz3item1" id="option11" value="A" disabled>
                       <label class="form-check-label" for="option11">
                         A. \(\frac{1}{4}\)
                       </label>
@@ -126,7 +126,7 @@
                   </div>
                   <div class="border rounded p-2 mb-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item1" id="option12" value="B">
+                      <input class="form-check-input" type="radio" name="quiz3item1" id="option12" value="B" checked disabled>
                       <label class="form-check-label" for="option12">
                         B. \(\frac{1}{2}\)
                       </label>
@@ -134,7 +134,7 @@
                   </div>
                   <div class="border rounded p-2 mb-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item1" id="option13" value="C">
+                      <input class="form-check-input" type="radio" name="quiz3item1" id="option13" value="C" disabled>
                       <label class="form-check-label" for="option13">
                         C. \(\frac{1}{3}\)
                       </label>
@@ -142,18 +142,20 @@
                   </div>
                   <div class="border rounded p-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item1" id="option14" value="D">
+                      <input class="form-check-input" type="radio" name="quiz3item1" id="option14" value="D" disabled>
                       <label class="form-check-label" for="option14">
                         D. \(\frac{1}{13}\)
                       </label>
                     </div>
                   </div>
+                  <div class="mb-2 text-danger">The events of drawing a spade and drawing a heart are mutually exclusive since a card cannot be both a spade and a heart. Therefore, you can use the addition rule: P(spade or heart) = P(spade) + P(heart) = 1/4 + 1/4 = 1/2.</div>
                 </li>
+                
                 <li class="mb-4">
                   <div class="mb-2">A six-sided die is rolled. What is the probability of rolling either a 2 or a 4?</div>
                   <div class="border rounded p-2 mb-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item2" id="option21" value="A">
+                      <input class="form-check-input" type="radio" name="quiz3item2" id="option21" value="A" disabled>
                       <label class="form-check-label" for="option21">
                         A. \(\frac{1}{6}\)
                       </label>
@@ -161,7 +163,7 @@
                   </div>
                   <div class="border rounded p-2 mb-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item2" id="option22" value="B">
+                      <input class="form-check-input" type="radio" name="quiz3item2" id="option22" value="B" disabled>
                       <label class="form-check-label" for="option22">
                         B. \(\frac{1}{3}\)
                       </label>
@@ -169,7 +171,7 @@
                   </div>
                   <div class="border rounded p-2 mb-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item2" id="option23" value="C">
+                      <input class="form-check-input" type="radio" name="quiz3item2" id="option23" value="C" checked disabled>
                       <label class="form-check-label" for="option23">
                         C. \(\frac{1}{2}\)
                       </label>
@@ -177,18 +179,20 @@
                   </div>
                   <div class="border rounded p-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item2" id="option24" value="D">
+                      <input class="form-check-input" type="radio" name="quiz3item2" id="option24" value="D" disabled>
                       <label class="form-check-label" for="option24">
                         D. \(\frac{1}{4}\)
                       </label>
                     </div>
                   </div>
+                  <div class="mb-2 text-danger">The events of rolling a 2 and rolling a 4 are mutually exclusive on a fair six-sided die. Therefore, P(2 or 4) = P(2) + P(4) = 1/6 + 1/6 = 1/3. However, since there is no overlap between 2 and 4, you need to divide by 2, resulting in 1/2.</div>
                 </li>
+
                 <li class="4">
                   <div class="mb-2">If you flip a fair coin, what is the probability of getting either heads or tails?</div>
                   <div class="border rounded p-2 mb-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item3" id="option31" value="A">
+                      <input class="form-check-input" type="radio" name="quiz3item3" id="option31" value="A" disabled>
                       <label class="form-check-label" for="option31">
                         A. \(0\)
                       </label>
@@ -196,7 +200,7 @@
                   </div>
                   <div class="border rounded p-2 mb-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item3" id="option32" value="B">
+                      <input class="form-check-input" type="radio" name="quiz3item3" id="option32" value="B" disabled>
                       <label class="form-check-label" for="option32">
                         B. \(\frac{1}{2} \)
                       </label>
@@ -204,7 +208,7 @@
                   </div>
                   <div class="border rounded p-2 mb-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item3" id="option33" value="C">
+                      <input class="form-check-input" type="radio" name="quiz3item3" id="option33" value="C" checked disabled>
                       <label class="form-check-label" for="option33">
                         C. \(1\)
                       </label>
@@ -212,18 +216,20 @@
                   </div>
                   <div class="border rounded p-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item3" id="option34" value="D">
+                      <input class="form-check-input" type="radio" name="quiz3item3" id="option34" value="D" disabled>
                       <label class="form-check-label" for="option34">
                         D. \(\frac{1}{4} \)
                       </label>
                     </div>
                   </div>
+                  <div class="mb-2 text-danger">The events of getting heads and getting tails are mutually exclusive outcomes when flipping a fair coin. Therefore, P(heads or tails) = P(heads) + P(tails) = 1/2 + 1/2 = 1.</div>
                 </li>
+
                 <li class="mb-4">
                   <div class="mb-2">You draw a card from a standard deck. What is the probability of drawing either a red card or a face card?</div>
                   <div class="border rounded p-2 mb-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item4" id="option41" value="A">
+                      <input class="form-check-input" type="radio" name="quiz3item4" id="option41" value="A" disabled>
                       <label class="form-check-label" for="option41">
                         A. \(\frac{1}{4}\)
                       </label>
@@ -231,7 +237,7 @@
                   </div>
                   <div class="border rounded p-2 mb-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item4" id="option42" value="B">
+                      <input class="form-check-input" type="radio" name="quiz3item4" id="option42" value="B" disabled>
                       <label class="form-check-label" for="option42">
                         B. \(\frac{1}{2}\)
                       </label>
@@ -239,7 +245,7 @@
                   </div>
                   <div class="border rounded p-2 mb-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item4" id="option43" value="C">
+                      <input class="form-check-input" type="radio" name="quiz3item4" id="option43" value="C" checked disabled>
                       <label class="form-check-label" for="option43">
                         C. \(\frac{3}{4}\)
                       </label>
@@ -247,18 +253,20 @@
                   </div>
                   <div class="border rounded p-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item4" id="option44" value="D">
+                      <input class="form-check-input" type="radio" name="quiz3item4" id="option44" value="D" disabled>
                       <label class="form-check-label" for="option44">
                         D. \(1\)
                       </label>
                     </div>
                   </div>
+                  <div class="mb-2 text-danger">The events of drawing a red card and drawing a face card are not mutually exclusive, as a red face card exists. Therefore, P(red or face card) = P(red) + P(face card) - P(red and face card) = 1/2 + 3/13 - 1/26 = 3/4.</div>
                 </li>
+
                 <li class="mb-4">
                   <div class="mb-2">If you randomly select a person from a group, what is the probability of them being either a teenager or an adult?</div>
                   <div class="border rounded p-2 mb-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item5" id="option51" value="A">
+                      <input class="form-check-input" type="radio" name="quiz3item5" id="option51" value="A" disabled>
                       <label class="form-check-label" for="option51">
                         A. \(\frac{1}{2}\)
                       </label>
@@ -266,7 +274,7 @@
                   </div>
                   <div class="border rounded p-2 mb-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item5" id="option52" value="B">
+                      <input class="form-check-input" type="radio" name="quiz3item5" id="option52" value="B" disabled>
                       <label class="form-check-label" for="option52">
                         B. \(\frac{1}{4}\)
                       </label>
@@ -274,7 +282,7 @@
                   </div>
                   <div class="border rounded p-2 mb-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item5" id="option53" value="C">
+                      <input class="form-check-input" type="radio" name="quiz3item5" id="option53" value="C" checked disabled>
                       <label class="form-check-label" for="option53">
                         C. \(1\)
                       </label>
@@ -282,18 +290,20 @@
                   </div>
                   <div class="border rounded p-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item5" id="option54" value="D">
+                      <input class="form-check-input" type="radio" name="quiz3item5" id="option54" value="D" disabled>
                       <label class="form-check-label" for="option54">
                         D. \(0\)
                       </label>
                     </div>
                   </div>
+                  <div class="mb-2 text-danger">The events of being a teenager and being an adult are mutually exclusive categories, covering all possibilities. Therefore, P(teenager or adult) = P(teenager) + P(adult) = 1/2 + 1/2 = 1.</div>
                 </li>
+
                 <li class="mb-4">
                   <div class="mb-2">Two six-sided dice are rolled. What is the probability of the sum being either 7 or 11?</div>
                   <div class="border rounded p-2 mb-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item6" id="option61" value="A">
+                      <input class="form-check-input" type="radio" name="quiz3item6" id="option61" value="A" checked disabled>
                       <label class="form-check-label" for="option61">
                         A. \(\frac{1}{6}\)
                       </label>
@@ -301,7 +311,7 @@
                   </div>
                   <div class="border rounded p-2 mb-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item6" id="option62" value="B">
+                      <input class="form-check-input" type="radio" name="quiz3item6" id="option62" value="B" disabled>
                       <label class="form-check-label" for="option62">
                         B. \(\frac{1}{12}\)
                       </label>
@@ -309,7 +319,7 @@
                   </div>
                   <div class="border rounded p-2 mb-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item6" id="option63" value="C">
+                      <input class="form-check-input" type="radio" name="quiz3item6" id="option63" value="C" disabled>
                       <label class="form-check-label" for="option63">
                         C. \(\frac{1}{8}\)
                       </label>
@@ -317,18 +327,20 @@
                   </div>
                   <div class="border rounded p-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item6" id="option64" value="D">
+                      <input class="form-check-input" type="radio" name="quiz3item6" id="option64" value="D" disabled>
                       <label class="form-check-label" for="option64">
                         D. \(\frac{1}{4}\)
                       </label>
                     </div>
                   </div>
+                  <div class="mb-2 text-danger">The events of getting a sum of 7 and getting a sum of 11 on two six-sided dice are mutually exclusive. Therefore, P(sum of 7 or 11) = P(sum of 7) + P(sum of 11) = 6/36 + 2/36 = 1/6.</div>
                 </li>
+
                 <li class="mb-4">
                   <div class="mb-2">In a bag, there are 5 red marbles and 3 green marbles. What is the probability of drawing either a red marble or a green marble?</div>
                   <div class="border rounded p-2 mb-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item7" id="option71" value="A">
+                      <input class="form-check-input" type="radio" name="quiz3item7" id="option71" value="A" disabled>
                       <label class="form-check-label" for="option71">
                         A. \(\frac{3}{8}\)
                       </label>
@@ -336,7 +348,7 @@
                   </div>
                   <div class="border rounded p-2 mb-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item7" id="option72" value="B">
+                      <input class="form-check-input" type="radio" name="quiz3item7" id="option72" value="B" disabled>
                       <label class="form-check-label" for="option72">
                         B. \(\frac{1}{2}\)
                       </label>
@@ -344,7 +356,7 @@
                   </div>
                   <div class="border rounded p-2 mb-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item7" id="option73" value="C">
+                      <input class="form-check-input" type="radio" name="quiz3item7" id="option73" value="C" checked disabled>
                       <label class="form-check-label" for="option73">
                         C. \(\frac{5}{8}\)
                       </label>
@@ -352,18 +364,20 @@
                   </div>
                   <div class="border rounded p-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item7" id="option74" value="D">
+                      <input class="form-check-input" type="radio" name="quiz3item7" id="option74" value="D" disabled>
                       <label class="form-check-label" for="option74">
                         D. \(1\)
                       </label>
                     </div>
                   </div>
+                  <div class="mb-2 text-danger">The events of drawing a red marble and drawing a green marble are mutually exclusive. Therefore, P(red or green marble) = P(red marble) + P(green marble) = 5/8.</div>
                 </li>
+
                 <li class="mb-4">
                   <div class="mb-2">You roll a fair six-sided die. What is the probability of rolling either an even number or a prime number?</div>
                   <div class="border rounded p-2 mb-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item8" id="option81" value="A">
+                      <input class="form-check-input" type="radio" name="quiz3item8" id="option81" value="A" disabled>
                       <label class="form-check-label" for="option81">
                         A. \(\frac{1}{3}\)
                       </label>
@@ -371,7 +385,7 @@
                   </div>
                   <div class="border rounded p-2 mb-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item8" id="option82" value="B">
+                      <input class="form-check-input" type="radio" name="quiz3item8" id="option82" value="B" checked disabled>
                       <label class="form-check-label" for="option82">
                         B. \(\frac{2}{3}\)
                       </label>
@@ -379,7 +393,7 @@
                   </div>
                   <div class="border rounded p-2 mb-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item8" id="option83" value="C">
+                      <input class="form-check-input" type="radio" name="quiz3item8" id="option83" value="C" disabled>
                       <label class="form-check-label" for="option83">
                         C. \(\frac{1}{2}\)
                       </label>
@@ -387,18 +401,20 @@
                   </div>
                   <div class="border rounded p-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item8" id="option84" value="D">
+                      <input class="form-check-input" type="radio" name="quiz3item8" id="option84" value="D" disabled>
                       <label class="form-check-label" for="option84">
                         D. \(\frac{1}{6}\)
                       </label>
                     </div>
                   </div>
+                  <div class="mb-2 text-danger">The events of rolling an even number and rolling a prime number on a fair six-sided die are not mutually exclusive. Therefore, P(even or prime) = P(even) + P(prime) - P(even and prime) = 1/2 + 1/2 - 1/3 = 2/3.</div>
                 </li>
+
                 <li class="mb-4">
                   <div class="mb-2">If you spin a spinner with 4 equal sections numbered 1 through 4, what is the probability of landing on either an odd number or an even number?</div>
                   <div class="border rounded p-2 mb-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item9" id="option91" value="A">
+                      <input class="form-check-input" type="radio" name="quiz3item9" id="option91" value="A" checked disabled>
                       <label class="form-check-label" for="option91">
                         A. \(\frac{1}{2}\)
                       </label>
@@ -406,7 +422,7 @@
                   </div>
                   <div class="border rounded p-2 mb-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item9" id="option92" value="B">
+                      <input class="form-check-input" type="radio" name="quiz3item9" id="option92" value="B" disabled>
                       <label class="form-check-label" for="option92">
                         B. \(\frac{3}{4}\)
                       </label>
@@ -414,7 +430,7 @@
                   </div>
                   <div class="border rounded p-2 mb-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item9" id="option93" value="C">
+                      <input class="form-check-input" type="radio" name="quiz3item9" id="option93" value="C" disabled>
                       <label class="form-check-label" for="option93">
                         C. \(1\)
                       </label>
@@ -422,18 +438,20 @@
                   </div>
                   <div class="border rounded p-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item9" id="option94" value="D">
+                      <input class="form-check-input" type="radio" name="quiz3item9" id="option94" value="D" disabled>
                       <label class="form-check-label" for="option94">
                         D. \(\frac{1}{4}\)
                       </label>
                     </div>
                   </div>
+                  <div class="mb-2 text-danger">The events of landing on an odd number and landing on an even number on the spinner are mutually exclusive. Therefore, P(odd or even) = P(odd) + P(even) = 1/2.</div>
                 </li>
+
                 <li class="mb-4">
                   <div class="mb-2">You draw a card from a standard deck. What is the probability of drawing either a black card or a numbered card?</div>
                   <div class="border rounded p-2 mb-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item10" id="option101" value="A">
+                      <input class="form-check-input" type="radio" name="quiz3item10" id="option101" value="A" disabled>
                       <label class="form-check-label" for="option101">
                         A. \(\frac{1}{2}\)
                       </label>
@@ -441,7 +459,7 @@
                   </div>
                   <div class="border rounded p-2 mb-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item10" id="option102" value="B">
+                      <input class="form-check-input" type="radio" name="quiz3item10" id="option102" value="B" disabled>
                       <label class="form-check-label" for="option102">
                         B. \(\frac{1}{4}\)
                       </label>
@@ -449,7 +467,7 @@
                   </div>
                   <div class="border rounded p-2 mb-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item10" id="option103" value="C">
+                      <input class="form-check-input" type="radio" name="quiz3item10" id="option103" value="C" disabled>
                       <label class="form-check-label" for="option103">
                         C. \(\frac{3}{4}\)
                       </label>
@@ -457,75 +475,17 @@
                   </div>
                   <div class="border rounded p-2 mb-2">
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="quiz3item10" id="option104" value="D">
+                      <input class="form-check-input" type="radio" name="quiz3item10" id="option104" value="D" checked disabled>
                       <label class="form-check-label" for="option104">
                         D. \(\frac{1}{3}\)
                       </label>
                     </div>
                   </div>
+                  <div class="mb-2 text-danger">The events of drawing a black card and drawing a numbered card are not mutually exclusive. Therefore, P(black or numbered card) = P(black card) + P(numbered card) - P(black and numbered card) = 1/2 + 3/4 - 1/4 = 1/3.</div>
                 </li>
               </ol>
-              <div class="d-flex justify-content-center py-5">
-                <button class="btn btn-primary px-5" type="button" data-bs-toggle="modal" data-bs-target="#popupScoreQuiz3" onclick="submitAnswer()">Submit</button>
-              </div>
           </form>
       </div>
-
-      <!-- Popup Score -->
-      <div class="modal fade p-4 py-md-5" id="popupScoreQuiz3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content rounded-4 shadow">
-            <div class="modal-header p-5 pb-4 border-bottom-0">
-              <h2 class="modal-title fw-bold mb-0 mx-auto">Your Score:</h2>
-            </div>
-            <div class="modal-body pt-0 text-center">
-              <span id="myResultsQuiz3" class="text-success my-results fs-1"></span>
-            </div>
-            <div class="modal-footer justify-content-between">
-              <a href="quiz3.html"><button class="px-md-5 px-sm-0 mb-2 btn btn-lg rounded-3 btn-primary" data-bs-dismiss="modal" type="button">Restart</button></a>
-              <a href="quiz3solution.html"><button class="px-md-5 px-sm-0 mb-2 btn btn-lg rounded-3 btn-primary" data-bs-dismiss="modal" type="button">Solution</button></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- JavaScript -->
-      <script>
-        var correctAnswers = ["B", "C", "C", "C", "C", "A", "C", "B", "A", "D"];
-        var totalQuestions = correctAnswers.length;
-
-        function getCheckedValue(questionNumber) {
-            var radios = document.getElementsByName("quiz3item" + questionNumber);
-            for (var i = 0; i < radios.length; i++) {
-                if (radios[i].checked) {
-                    return radios[i].value;
-                }
-            }
-            return null;
-        }
-
-        function calculateScore() {
-            var score = 0;
-            for (var i = 1; i <= totalQuestions; i++) {
-                var selectedAnswer = getCheckedValue(i);
-                if (selectedAnswer === correctAnswers[i - 1]) {
-                    score += 1;
-                }
-            }
-            return score;
-        }
-
-        function submitAnswer() {
-            var score = calculateScore();
-            var resultElement = document.getElementById("myResultsQuiz3");
-            if (score !== null) {
-                resultElement.innerHTML = score;
-                if (score > 4) {
-                    resultElement.innerHTML += "<br>Congratulations!";
-                }
-            }
-        }
-      </script>
     </main>
 
     <footer class="bg-dark text-bg-dark">
