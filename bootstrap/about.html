@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!--Navigation Bar-->
     <nav class="navbar navbar-expand-lg px-2 navbar-dark bg-dark fixed-top" aria-label="Fifth navbar example">
       <div class="container-fluid">
         <a class="navbar-brand" href="home.html">
@@ -31,8 +32,8 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle link-light" href="features.html" data-bs-toggle="dropdown" aria-expanded="false">Features</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="lessons.html">Lessons</a></li>
-                <li><a class="dropdown-item" href="quizzes.html">Quizzes</a></li>
+                <li><a class="dropdown-item" href="lessons.html" onclick="lessonsLogin()" data-bs-toggle="modal" data-bs-target="#loginForm">Lessons</a></li>
+                <li><a class="dropdown-item" href="quizzes.html" onclick="quizzesLogin()" data-bs-toggle="modal" data-bs-target="#loginForm">Quizzes</a></li>
               </ul>
             </li>
           </ul>
@@ -40,34 +41,51 @@
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <input type="image" src="../images/search.png" class="img-fluid my-auto" width="24" alt="search">
           </form>
-          <a href="" class="btn btn-success px-4" data-bs-toggle="modal" data-bs-target="#modalSigninForm">Sign in</a>
+          <div>
+            <a href="" class="btn btn-success px-4 mb-lg-0 mb-2" onclick="loginClick()" data-bs-toggle="modal" data-bs-target="#loginForm">Log in</a>
+          </div>
         </div>
       </div>
     </nav>
     
     <main>
-      <!--Sign in Form-->
-      <div class="modal fade p-4 py-md-5" id="modalSigninForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+      <!--Log in Form-->
+      <div class="modal fade p-4 py-md-5" id="loginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content rounded-4 shadow">
                 <div class="modal-header p-5 pb-4 border-bottom-0">
-                    <h1 class="fw-bold mb-0 fs-2">Sign in</h1>
+                    <h1 class="fw-bold mb-0 fs-2">Log in</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-5 pt-0">
                   <form action="">
-                    <div class="form-floating mb-3">
-                      <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
-                      <label for="floatingInput">Email address</label>
+                    <div class="error-msg w-100 p-1 mb-3 d-none" id="req-error">
+                      Please fill all the requirements
+                    </div>
+                    <div class="error-msg w-100 p-1 mb-3 d-none" id="must-login">
+                      You must log in first
                     </div>
                     <div class="form-floating mb-3">
-                      <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
-                      <label for="floatingPassword">Password</label>
+                      <input type="text" class="form-control rounded-3" id="username" placeholder="" required>
+                      <label for="username">Username</label>
                     </div>
-
+                    <div class="form-floating mb-3">
+                      <input type="password" class="form-control rounded-3 mb-2" id="password" placeholder="" required>
+                      <label for="password">Password</label>
+                    </div>
+                    <div class="error-msg w-100 p-1 mb-3 d-none" id="inc-msg">
+                      Incorrect username or password
+                    </div>
                     <div class="text-center">
-                      <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign in</button>
-                      <a href="" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modalSignupForm">Sign up</a>
+                      <button class="w-100 mb-3 btn btn-lg rounded-3 btn-primary" type="button" onclick="login()">Log in</button>
+                      <div class="form-footer d-flex flex-column flex-md-row justify-content-between">
+                        <div>
+                          <span class="text-body-secondary">Need an account?</span>
+                          <a href="#" class="text-primary" data-bs-toggle="modal" data-bs-target="#signupForm">Sign up</a></div>
+                        <div>
+                          <a href="#" class="text-primary ">Forgot password?</a>
+                        </div>
+                      </div>
                     </div>
                   </form>
                 </div>
@@ -76,8 +94,8 @@
       </div>
 
       <!--Sign up Form-->
-      <div class="modal fade p-4 py-md-5" id="modalSignupForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+      <div class="modal fade p-4 py-md-5" id="signupForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content rounded-4 shadow">
                 <div class="modal-header p-5 pb-4 border-bottom-0">
                     <h1 class="fw-bold mb-0 fs-2">Sign up</h1>
@@ -85,23 +103,35 @@
                 </div>
                 <div class="modal-body p-5 pt-0">
                   <form action="">
+                    <div class="error-msg w-100 p-1 mb-3 d-none" id="req-error2">
+                      Please fill all the requirements
+                    </div>
+                    <p class="mb-3">Please fill in this form to create an account.</p>
                     <div class="form-floating mb-3">
-                      <input type="text" class="form-control rounded-3" id="floatingInput" placeholder="Name">
-                      <label for="floatingInput">Name</label>
+                      <input type="text" class="form-control rounded-3" id="username2" placeholder="" required>
+                      <label for="username">Username</label>
                     </div>
                     <div class="form-floating mb-3">
-                      <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
-                      <label for="floatingInput">Email address</label>
+                      <input type="email" class="form-control rounded-3" id="email" placeholder="name@example.com" required>
+                      <label for="email">Email address</label>
                     </div>
                     <div class="form-floating mb-3">
-                      <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
-                      <label for="floatingPassword">Password</label>
+                      <input type="password" class="form-control rounded-3 mb-2" id="password2" placeholder="" required>
+                      <label for="password">Password</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input type="password" class="form-control rounded-3 mb-2" id="confirmPassword" placeholder="" required>
+                      <label for="confirmPassword">Confirm Password</label>
+                      <div class="error-msg w-100 p-1 mb-3 d-none" id="pass-error">
+                        Password don't match
+                      </div>
+                      <input type="checkbox" name="" id="rememberAcount"> Remember me
                     </div>
 
                     <div class="text-center">
-                      <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign up</button>
-                      <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small><br>
-                      <a href="" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modalSigninForm">Sign in</a>
+                      <button class="w-100 mb-3 btn btn-lg rounded-3 btn-primary" onclick="signup()" type="button">Sign up</button>
+                      <span class="text-body-secondary">Already have an account?</span> <a href="" class="text-primary" data-bs-toggle="modal" data-bs-target="#loginForm">Log in</a><br>
+                      <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small>
                     </div>
                   </form>
                 </div>
@@ -110,8 +140,8 @@
       </div>
 
       <div class="pb-5" style="margin-top: 64px;">
-        <!--Image-->
-        <div class="bg-image mb-5" style="background-image: url(img/about-bg.jpg); background-position: center; background-size: cover; width: 100%;">
+        <!--Background Image-->
+        <div class="bg-image mb-5" style="background-image: url(../images/about-bg.png); background-position: top; background-size: cover; width: 100%;">
           <div class="mask py-5" style="background-color: rgba(0, 0, 0, 0.4);">
             <div class="my-auto text-center py-4">
               <h1 class="text-white">About Us</h1>
@@ -119,6 +149,7 @@
           </div>
         </div>
 
+        <!--Content-->
         <div class="container">
           <div class="fs-5 fs-sm-6">
             <div class="mb-5">
@@ -146,20 +177,53 @@
       </div>
     </main>
 
-    <footer class="bg-dark text-bg-dark">
+    <!--Footer-->
+    <footer class="text-bg-dark">
       <div class="container">
-        <div class="d-flex justify-content-between py-4">
-          <p>For Educational Purposes Only</p>
-          <ul class="list-unstyled d-flex">
-            <li><a href="https://www.facebook.com/" target="_blank"><img src="../images/fb-icon.png" width="24" alt="fb icon"></a></li>
-            <li class="ms-2"><a href="https://www.twitter.com/" target="_blank"><img src="../images/twitter-icon.png" width="24" alt="twitter icon"></a></li>
-            <li class="ms-2"><a href="https://www.instagram.com/" target="_blank"><img src="../images/ig-icon.png" width="24" alt="ig icon"></a></li>
-            <li class="ms-2"><a href="mailto:camilaenverzo12@gmail.com" target="_blank"><img src="../images/gmail-icon.png" width="24" alt="gmail icon"></a></li>
-          </ul>
-        </div>
+          <div class="py-3">
+            
+            <div class="d-flex flex-column flex-md-row justify-content-between pt-4">
+              <div class="col-6 col-md-2">
+                <img src="../images/logo-white.png" class="mb-2" alt="" style="width: 150px;">
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="home.html" class="nav-link p-0 text-white">Home</a></li>
+                  <li class="nav-item mb-2"><a href="about.html" class="nav-link p-0 text-white">About</a></li>
+                  <li class="nav-item mb-2"><a href="contact.html" class="nav-link p-0 text-white">Contact</a></li>
+                  <li class="nav-item mb-2"><a href="features.html" class="nav-link p-0 text-white">Features</a></li>
+                </ul>
+              </div>
+
+              <div class="col-6 col-md-2">
+                <h5>Download Our App</h5>
+                <a href="download.html" class="btn btn-outline-light mt-2 mb-2 mb-lg-0">Download</a>
+              </div>
+
+              <div class="col-md-5 offset-md-1">
+                <form>
+                  <h5>Subscribe for the weekly newsletter!</h5>
+                  <div class="flex-column flex-sm-row w-100">
+                    <input type="email" class="form-control rounded-3 mb-2" id="newsletter1" placeholder="Email address">
+                    <button class="btn btn-success w-100 py-2" type="button">Subscribe</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+        
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+              <p>For Educational Purposes Only</p>
+              <ul class="list-unstyled d-flex">
+                <li class="ms-3"><a class="link-body-emphasis" href="https://www.facebook.com/" target="_blank"><img src="../images/fb-icon.png" class="img-fluid" width="24" alt="fb icon"></a></li>
+                <li class="ms-3"><a class="link-body-emphasis" href="https://www.twitter.com/" target="_blank"><img src="../images/twitter-icon.png" class="img-fluid" width="24" alt="twitter icon"></a></li>
+                <li class="ms-3"><a class="link-body-emphasis" href="https://www.instagram.com/" target="_blank"><img src="../images/ig-icon.png" class="img-fluid" width="24" alt="ig icon"></a></li>
+                <li class="ms-3"><a class="link-body-emphasis" href="mailto:camilaenverzo12@gmail.com" target="_blank"><img src="../images/gmail-icon.png" class="img-fluid" width="24" alt="gmail icon"></a></li>
+              </ul>
+            </div>
+            
+          </div>
       </div>
     </footer>
     
+    <script src="login.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

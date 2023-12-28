@@ -13,11 +13,31 @@ footer ul li a:hover,
         text-decoration: underline;
     }
 
+.user a:hover {
+    cursor: pointer;
+}
+.error-msg {
+    border: 1px solid #d63b4e;
+    background-color: #ffdce0;
+    border-radius: 4px;
+    color: #d63b4e;
+}
+
+.btn-dark:hover {
+    background-color: #cccfd2;
+    color: black;
+
+}
+
 .fixed-top-margin{
     overflow: hidden;
     position: fixed;
     top: 80px;
     right: 20px;
+}
+
+.card {
+    max-width: 100%;
 }
 
 .background {
@@ -29,6 +49,35 @@ footer ul li a:hover,
     justify-content: center;
 }
 
-.card {
-    max-width: 100%;
+.lesson-sidebar {
+    z-index: 1000;
+}
+
+.ans-btns button {
+    background: #d0f0c0;
+    border: 1px solid #90ee90;
+    border-radius: 10px;
+}
+
+.ans-btns button.active {
+    background: seagreen;
+    color: white;
+}
+
+.timer-bg {
+    background-color: lightskyblue;
+    border-radius: 20px;
+}
+
+.score-factors {
+    border: 1px solid #cccfd2;
+    border-radius: 10px;
+}
+
+.l-color {
+    background-color: rgba(255,153,174,255);
+}
+
+.s-color {
+    background-color: rgba(145,204,244,255);
 }

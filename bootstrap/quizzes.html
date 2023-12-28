@@ -40,75 +40,15 @@
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <input type="image" src="../images/search.png" class="img-fluid my-auto" width="24" alt="search">
           </form>
-          <a href="" class="btn btn-success px-4" data-bs-toggle="modal" data-bs-target="#modalSigninForm">Sign in</a>
+          <div class="user d-flex my-auto mb-lg-0 mb-2">
+            <a href="profile.html"><img id="userProfile" src="../images/user-icon.png" alt="" width="35px"></a>
+            <a class="text-decoration-none my-auto ms-2 text-white" id="account_username" href="profile.html"></a>
+          </div>
         </div>
       </div>
     </nav>
 
-    <main>
-      <!--Sign in Form-->
-      <div class="modal fade p-4 py-md-5" id="modalSigninForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content rounded-4 shadow">
-                <div class="modal-header p-5 pb-4 border-bottom-0">
-                    <h1 class="fw-bold mb-0 fs-2">Sign in</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body p-5 pt-0">
-                  <form action="">
-                    <div class="form-floating mb-3">
-                      <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
-                      <label for="floatingInput">Email address</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                      <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
-                      <label for="floatingPassword">Password</label>
-                    </div>
-
-                    <div class="text-center">
-                      <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign in</button>
-                      <a href="" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modalSignupForm">Sign up</a>
-                    </div>
-                  </form>
-                </div>
-            </div>
-        </div>
-      </div>
-
-      <!--Sign up Form-->
-      <div class="modal fade p-4 py-md-5" id="modalSignupForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content rounded-4 shadow">
-                <div class="modal-header p-5 pb-4 border-bottom-0">
-                    <h1 class="fw-bold mb-0 fs-2">Sign up</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body p-5 pt-0">
-                  <form action="">
-                    <div class="form-floating mb-3">
-                      <input type="text" class="form-control rounded-3" id="floatingInput" placeholder="Name">
-                      <label for="floatingInput">Name</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                      <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
-                      <label for="floatingInput">Email address</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                      <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
-                      <label for="floatingPassword">Password</label>
-                    </div>
-
-                    <div class="text-center">
-                      <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign up</button>
-                      <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small><br>
-                      <a href="" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modalSigninForm">Sign in</a>
-                    </div>
-                  </form>
-                </div>
-            </div>
-        </div>
-      </div>
-      
+    <main>      
       <div class="pb-5" style="margin-top: 80px;">
         <div class="container">
 
@@ -132,43 +72,231 @@
           <h1 class="my-5 pb-2 border-bottom">Quizzes</h1>
           <div class="row row-cols-1 row-cols-md-3 g-4">
   
-            <div class="col">
-              <div class="card h-100">
-                <img src="../images/quiz_1.png" class="card-img-top mx-auto d-block pt-3" alt="lesson1" style="width: 150px;">
-                <div class="card-body">
-                  <h5 class="card-title">Basic Concepts of Probability Quiz</h5>
-                  <p class="card-text">10 items</p>
-                  <a href="quiz1.html"><button type="button" class="btn btn-outline-dark">Start Quiz</button></a>
+              <!--Quiz 1-->
+              <div class="col">
+                <div class="card h-100">
+                  <img src="../images/quiz_1.png" class="card-img-top mx-auto d-block pt-3" alt="lesson1" style="width: 150px;">
+                  <div class="card-body">
+                    <h5 class="card-title">Basic Concepts of Probability Quiz</h5>
+                    <p class="card-text">10 items</p>
+                    <p id="Score1">High Score: </p>
+                    <p id="Time1">Best Time: </p>
+                    <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#quiz1form">Start Quiz</button>
+                  </div>
                 </div>
               </div>
-            </div>
-  
-            <div class="col">
-              <div class="card h-100">
-                <img src="../images/quiz_2.png" class="card-img-top mx-auto d-block pt-3" alt="lesson1" style="width: 150px;">
-                <div class="card-body">
-                  <h5 class="card-title">Conditional Probability and the Multiplication Rule Quiz</h5>
-                  <p class="card-text">10 items</p>
-                  <a href="quiz2.html"><button type="button" class="btn btn-outline-dark">Start Quiz</button></a>
+    
+              <!--Quiz 2-->
+              <div class="col">
+                <div class="card h-100">
+                  <img src="../images/quiz_2.png" class="card-img-top mx-auto d-block pt-3" alt="lesson1" style="width: 150px;">
+                  <div class="card-body">
+                    <h5 class="card-title">Conditional Probability and the Multiplication Rule Quiz</h5>
+                    <p class="card-text">10 items</p>
+                    <p id="Score2">High Score: </p>
+                    <p id="Time2">Best Time: </p>
+                    <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#quiz2form">Start Quiz</button>
+                  </div>
                 </div>
               </div>
-            </div>
-  
-            <div class="col">
-              <div class="card h-100">
-                <img src="../images/quiz_3.png" class="card-img-top mx-auto d-block pt-3" alt="lesson1" style="width: 150px;">
-                <div class="card-body">
-                  <h5 class="card-title">Addition Rule Quiz</h5>
-                  <p class="card-text">10 items</p>
-                  <a href="quiz3.html"><button type="button" class="btn btn-outline-dark">Start Quiz</button></a>
+    
+              <!--Quiz 3-->
+              <div class="col">
+                <div class="card h-100">
+                  <img src="../images/quiz_3.png" class="card-img-top mx-auto d-block pt-3" alt="lesson1" style="width: 150px;">
+                  <div class="card-body">
+                    <h5 class="card-title">Addition Rule Quiz</h5>
+                    <p class="card-text">10 items</p>
+                    <p id="Score3">High Score: </p>
+                    <p id="Time3">Best Time: </p>
+                    <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#quiz3form">Start Quiz</button>
+                  </div>
                 </div>
               </div>
-            </div>
-  
           </div>
         </div>
-  
       </div>
+
+      <!--Popup Quiz1 Form-->
+      <div class="modal p-4"  id="quiz1form" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false" style="background-color: rgba(46, 139, 87, 1); margin-top: 0px;">
+        <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 600px">
+          <div class="modal-content rounded-3 shadow">
+            <div class="modal-body">
+
+                <!--Instruction-->
+                <div class="" id="instruction1">
+                    <h3 class="modal-title1 mb-3 text-center" id="title1">Basic Concepts of Probability Quiz</h3>
+                    <ul class="mb-4 fs-5">
+                        <li>Please carefully read each question and select your answer from the multiple-choice options.</li>
+                        <li>Choose only one answer per question and click next to proceed to the next one.</li>
+                        <li>You have a 20 seconds time limit per question.</li>
+                        <li>Your score will display after answering all 10 questions. Good luck!</li>
+                    </ul>
+                    <div class="d-flex justify-content-between px-0 px-lg-5">
+                        <button class="btn btn-dark" onclick="exitButton1()" type="button" style="width: 100px;" data-bs-dismiss="modal">Exit</button>
+                        <button class="btn btn-primary" id="startQuiz1" type="button" style="width: 100px;">Start</button>
+                    </div>
+                </div>
+
+                <!--Quiz Content-->
+                <div class="d-none" id="quiz1">
+                    <div class="quiz-header d-flex justify-content-between border-bottom pb-2 fs-5">
+                        <p class="my-auto" id="quiz-head1">1 of 10 Questions</p>
+                        <div class="timer-bg px-4 py-1">
+                            <img class="me-2" src="../images/stopwatch.png" alt="" width="20px">
+                            <span class="my-auto" id="timer_sec1">20s</span>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-between pt-3 fs-5" id="quiz-content1">
+                        <p id="question1"><b>Question goes here</b></p>
+                        <div class="ans-btns d-grid gap-2" id="ans-btns1">
+                            <button class="p-2" id="opt1A">Answer 1</button>
+                            <button class="p-2" id="opt1B">Answer 2</button>
+                            <button class="p-2" id="opt1C">Answer 3</button>
+                            <button class="p-2" id="opt1D">Answer 4</button>
+                        </div>
+                    </div>
+                    <div class="nxt-btn text-end">
+                        <button class="btn btn-primary mt-4 px-4" id="next-btn1" style="visibility: hidden;">Next</button>
+                    </div>
+                </div>
+
+                <!--Score-->
+                <div class="d-none text-center" id="score1">
+                    <img src="../images/crown.png" alt="" width="100px">
+                    <h3 class="mb-3">Quiz completed!</h3>
+                    <p class="fs-5" id="score-text1"></p>
+                    <div class="d-flex justify-content-between px-0 px-lg-5">
+                        <button class="btn btn-dark" onclick="exitButton1()" type="button" style="width: 100px;" data-bs-dismiss="modal">Exit</button>
+                        <button class="btn btn-primary" onclick="restartButton1()" type="button" style="width: 100px;">Restart</button>
+                    </div>
+                </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Popup Quiz2 Form-->
+      <div class="modal p-4"  id="quiz2form" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false" style="background-color: rgba(46, 139, 87, 1); margin-top: 0px;">
+        <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 600px">
+          <div class="modal-content rounded-3 shadow">
+            <div class="modal-body">
+
+                <!--Instruction-->
+                <div class="" id="instruction2">
+                    <h3 class="modal-title2 mb-3 text-center" id="title2">Conditional Probability and the Multiplication Rule Quiz</h3>
+                    <ul class="mb-4 fs-5">
+                        <li>Please carefully read each question and select your answer from the multiple-choice options.</li>
+                        <li>Choose only one answer per question and click next to proceed to the next one.</li>
+                        <li>You have a 20 seconds time limit per question.</li>
+                        <li>Your score will display after answering all 10 questions. Good luck!</li>
+                    </ul>
+                    <div class="d-flex justify-content-between px-0 px-lg-5">
+                        <button type="button" class="btn btn-dark" onclick="exitButton2()" style="width: 100px;" data-bs-dismiss="modal">Exit</button>
+                        <button type="button" class="btn btn-primary" onclick="startQuiz2()" style="width: 100px;">Start</button>
+                    </div>
+                </div>
+
+                <!--Quiz Content-->
+                <div class="d-none" id="quiz2">
+                    <div class="quiz-header d-flex justify-content-between border-bottom pb-2 fs-5">
+                        <p class="my-auto" id="quiz-head2">1 of 10 Questions</p>
+                        <div class="timer-bg px-4 py-1">
+                            <img class="me-2" src="../images/stopwatch.png" alt="" width="20px">
+                            <span class="my-auto" id="timer_sec2">20s</span>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-between pt-3 fs-5" id="quiz-content2">
+                        <p id="question2"><b>Question goes here</b></p>
+                        <div class="ans-btns d-grid gap-2" id="ans-btns2">
+                            <button class="p-2" id="opt2A">Answer 1</button>
+                            <button class="p-2" id="opt2B">Answer 2</button>
+                            <button class="p-2" id="opt2C">Answer 3</button>
+                            <button class="p-2" id="opt2D">Answer 4</button>
+                        </div>
+                    </div>
+                    <div class="nxt-btn text-end">
+                        <button class="btn btn-primary mt-4 px-4" id="next-btn2" style="visibility: hidden;">Next</button>
+                    </div>
+                </div>
+
+                <!--Score-->
+                <div class="d-none text-center" id="score2">
+                    <img src="../images/crown.png" alt="" width="100px">
+                    <h3 class="mb-3">Quiz completed!</h3>
+                    <p class="fs-5" id="score-text2"></p>
+                    <div class="d-flex justify-content-between px-0 px-lg-5">
+                        <button class="btn btn-dark" onclick="exitButton2()" type="button" style="width: 100px;" data-bs-dismiss="modal">Exit</button>
+                        <button class="btn btn-primary" onclick="restartButton2()" type="button" style="width: 100px;">Restart</button>
+                    </div>
+                </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Popup Quiz3 Form-->
+      <div class="modal p-4"  id="quiz3form" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false" style="background-color: rgba(46, 139, 87, 1); margin-top: 0px;">
+        <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 600px">
+          <div class="modal-content rounded-3 shadow">
+            <div class="modal-body">
+
+                <!--Instruction-->
+                <div class="" id="instruction3">
+                    <h3 class="modal-title1 mb-3 text-center" id="title3">Addition Rule Quiz</h3>
+                    <ul class="mb-4 fs-5">
+                        <li>Please carefully read each question and select your answer from the multiple-choice options.</li>
+                        <li>Choose only one answer per question and click next to proceed to the next one.</li>
+                        <li>You have a 20 seconds time limit per question.</li>
+                        <li>Your score will display after answering all 10 questions. Good luck!</li>
+                    </ul>
+                    <div class="d-flex justify-content-between px-0 px-lg-5">
+                        <button type="button" class="btn btn-dark" onclick="exitButton3()" style="width: 100px;" data-bs-dismiss="modal">Exit</button>
+                        <button type="button" class="btn btn-primary" onclick="startQuiz3()" style="width: 100px;">Start</button>
+                    </div>
+                </div>
+
+                <!--Quiz Content-->
+                <div class="d-none" id="quiz3">
+                    <div class="quiz-header d-flex justify-content-between border-bottom pb-2 fs-5">
+                        <p class="my-auto" id="quiz-head3">1 of 10 Questions</p>
+                        <div class="timer-bg px-4 py-1">
+                            <img class="me-2" src="../images/stopwatch.png" alt="" width="20px">
+                            <span class="my-auto" id="timer_sec3">20s</span>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-between pt-3 fs-5" id="quiz-content3">
+                        <p id="question3"><b>Question goes here</b></p>
+                        <div class="ans-btns d-grid gap-2" id="ans-btns3">
+                            <button class="p-2" id="opt3A">Answer 1</button>
+                            <button class="p-2" id="opt3B">Answer 2</button>
+                            <button class="p-2" id="opt3C">Answer 3</button>
+                            <button class="p-2" id="opt3D">Answer 4</button>
+                        </div>
+                    </div>
+                    <div class="nxt-btn text-end">
+                        <button class="btn btn-primary mt-4 px-4" id="next-btn3" style="visibility: hidden;">Next</button>
+                    </div>
+                </div>
+
+                <!--Score-->
+                <div class="d-none text-center" id="score3">
+                    <img src="../images/crown.png" alt="" width="100px">
+                    <h3 class="mb-3">Quiz completed!</h3>
+                    <p class="fs-5" id="score-text3"></p>
+                    <div class="d-flex justify-content-between px-0 px-lg-5">
+                        <button class="btn btn-dark" onclick="exitButton3()" type="button" style="width: 100px;" data-bs-dismiss="modal">Exit</button>
+                        <button class="btn btn-primary" onclick="restartButton3()" type="button" style="width: 100px;">Restart</button>
+                    </div>
+                </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
     </main>
 
     <footer class="bg-dark text-bg-dark">
@@ -185,6 +313,10 @@
       </div>
     </footer>
 
+    <script src="login.js"></script>
+    <script src="quiz1form.js"></script>
+    <script src="quiz2form.js"></script>
+    <script src="quiz3form.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

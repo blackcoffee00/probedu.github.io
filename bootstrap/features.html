@@ -8,8 +8,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
+    <!--Navigation Bar-->
     <nav class="navbar navbar-expand-lg px-2 navbar-dark bg-dark fixed-top" aria-label="Fifth navbar example">
       <div class="container-fluid">
         <a class="navbar-brand" href="home.html">
@@ -33,8 +32,8 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle link-light" href="features.html" data-bs-toggle="dropdown" aria-expanded="false">Features</a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="lessons.html">Lessons</a></li>
-                <li><a class="dropdown-item" href="quizzes.html">Quizzes</a></li>
+                <li><a class="dropdown-item" href="lessons.html" onclick="lessonsLogin()" data-bs-toggle="modal" data-bs-target="#loginForm">Lessons</a></li>
+                <li><a class="dropdown-item" href="quizzes.html" onclick="quizzesLogin()" data-bs-toggle="modal" data-bs-target="#loginForm">Quizzes</a></li>
               </ul>
             </li>
           </ul>
@@ -42,34 +41,51 @@
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <input type="image" src="../images/search.png" class="img-fluid my-auto" width="24" alt="search">
           </form>
-          <a href="" class="btn btn-success px-4" data-bs-toggle="modal" data-bs-target="#modalSigninForm">Sign in</a>
+          <div>
+            <a href="" class="btn btn-success px-4 mb-lg-0 mb-2" onclick="loginClick()" data-bs-toggle="modal" data-bs-target="#loginForm">Log in</a>
+          </div>
         </div>
       </div>
     </nav>
 
     <main>
-      <!--Sign in Form-->
-      <div class="modal fade p-4 py-md-5" id="modalSigninForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+      <!--Log in Form-->
+      <div class="modal fade p-4 py-md-5" id="loginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content rounded-4 shadow">
                 <div class="modal-header p-5 pb-4 border-bottom-0">
-                    <h1 class="fw-bold mb-0 fs-2">Sign in</h1>
+                    <h1 class="fw-bold mb-0 fs-2">Log in</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-5 pt-0">
                   <form action="">
-                    <div class="form-floating mb-3">
-                      <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
-                      <label for="floatingInput">Email address</label>
+                    <div class="error-msg w-100 p-1 mb-3 d-none" id="req-error">
+                      Please fill all the requirements
+                    </div>
+                    <div class="error-msg w-100 p-1 mb-3 d-none" id="must-login">
+                      You must log in first
                     </div>
                     <div class="form-floating mb-3">
-                      <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
-                      <label for="floatingPassword">Password</label>
+                      <input type="text" class="form-control rounded-3" id="username" placeholder="" required>
+                      <label for="username">Username</label>
                     </div>
-
+                    <div class="form-floating mb-3">
+                      <input type="password" class="form-control rounded-3 mb-2" id="password" placeholder="" required>
+                      <label for="password">Password</label>
+                    </div>
+                    <div class="error-msg w-100 p-1 mb-3 d-none" id="inc-msg">
+                      Incorrect username or password
+                    </div>
                     <div class="text-center">
-                      <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign in</button>
-                      <a href="" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modalSignupForm">Sign up</a>
+                      <button class="w-100 mb-3 btn btn-lg rounded-3 btn-primary" type="button" onclick="login()">Log in</button>
+                      <div class="form-footer d-flex flex-column flex-md-row justify-content-between">
+                        <div>
+                          <span class="text-body-secondary">Need an account?</span>
+                          <a href="#" class="text-primary" data-bs-toggle="modal" data-bs-target="#signupForm">Sign up</a></div>
+                        <div>
+                          <a href="#" class="text-primary ">Forgot password?</a>
+                        </div>
+                      </div>
                     </div>
                   </form>
                 </div>
@@ -78,8 +94,8 @@
       </div>
 
       <!--Sign up Form-->
-      <div class="modal fade p-4 py-md-5" id="modalSignupForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
+      <div class="modal fade p-4 py-md-5" id="signupForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content rounded-4 shadow">
                 <div class="modal-header p-5 pb-4 border-bottom-0">
                     <h1 class="fw-bold mb-0 fs-2">Sign up</h1>
@@ -87,23 +103,35 @@
                 </div>
                 <div class="modal-body p-5 pt-0">
                   <form action="">
+                    <div class="error-msg w-100 p-1 mb-3 d-none" id="req-error2">
+                      Please fill all the requirements
+                    </div>
+                    <p class="mb-3">Please fill in this form to create an account.</p>
                     <div class="form-floating mb-3">
-                      <input type="text" class="form-control rounded-3" id="floatingInput" placeholder="Name">
-                      <label for="floatingInput">Name</label>
+                      <input type="text" class="form-control rounded-3" id="username2" placeholder="" required>
+                      <label for="username">Username</label>
                     </div>
                     <div class="form-floating mb-3">
-                      <input type="email" class="form-control rounded-3" id="floatingInput" placeholder="name@example.com">
-                      <label for="floatingInput">Email address</label>
+                      <input type="email" class="form-control rounded-3" id="email" placeholder="name@example.com" required>
+                      <label for="email">Email address</label>
                     </div>
                     <div class="form-floating mb-3">
-                      <input type="password" class="form-control rounded-3" id="floatingPassword" placeholder="Password">
-                      <label for="floatingPassword">Password</label>
+                      <input type="password" class="form-control rounded-3 mb-2" id="password2" placeholder="" required>
+                      <label for="password">Password</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input type="password" class="form-control rounded-3 mb-2" id="confirmPassword" placeholder="" required>
+                      <label for="confirmPassword">Confirm Password</label>
+                      <div class="error-msg w-100 p-1 mb-3 d-none" id="pass-error">
+                        Password don't match
+                      </div>
+                      <input type="checkbox" name="" id="rememberAcount"> Remember me
                     </div>
 
                     <div class="text-center">
-                      <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign up</button>
-                      <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small><br>
-                      <a href="" class="btn btn-link" data-bs-toggle="modal" data-bs-target="#modalSigninForm">Sign in</a>
+                      <button class="w-100 mb-3 btn btn-lg rounded-3 btn-primary" onclick="signup()" type="button">Sign up</button>
+                      <span class="text-body-secondary">Already have an account?</span> <a href="" class="text-primary" data-bs-toggle="modal" data-bs-target="#loginForm">Log in</a><br>
+                      <small class="text-body-secondary">By clicking Sign up, you agree to the terms of use.</small>
                     </div>
                   </form>
                 </div>
@@ -129,16 +157,16 @@
             </ol>
           </div>
 
-        <!--Card-->
-          <h1 class="my-5 pb-2 border-bottom">Features</h1>
-          <div class="row row-cols-1 row-cols-sm-2 g-4">
+          <!--Card-->
+          <h1 class="mb-5 pb-2 border-bottom">Features</h1>
+          <div class="row row-cols-1 row-cols-md-2 g-4 mb-5 justify-content-center">
             <div class="col">
-              <div class="card h-100 mb-4">
+              <div class="card h-100">
                 <img src="../images/study.png" class="card-img-top mx-auto d-block img-fluid pt-3" alt="lesson" style="width: 150px;">
                 <div class="card-body">
                   <h5 class="card-title">Lessons</h5>
                   <p class="card-text">Discover our probability lessons that are design to make this subject approachable and engaging. Join us to explore the fascinating world of probability and take a step toward mastering this skill.</p>
-                  <a href="lessons.html"><button type="button" class="btn btn-outline-dark">Start Lesson</button></a>
+                  <button type="button" class="btn btn-outline-dark" onclick="lessonsLogin()" data-bs-toggle="modal" data-bs-target="#loginForm">Start Lessons</button>
                 </div>
               </div>
             </div>
@@ -148,13 +176,13 @@
                 <div class="card-body">
                   <h5 class="card-title">Quizzes</h5>
                   <p class="card-text">Challenge yourself, apply your probability knowledge, and receive immediate feedback to refine your skills. Elevate your understanding of probability through practice quizzes.</p>
-                  <a href="quizzes.html"><button type="button" class="btn btn-outline-dark">Start Quiz</button></a>
+                  <button type="button" class="btn btn-outline-dark" onclick="quizzesLogin()" data-bs-toggle="modal" data-bs-target="#loginForm">Start Quizzes</button>
                 </div>
               </div>
             </div>
+
           </div>
         </div>
-
       </div>
     </main>
 
@@ -172,6 +200,7 @@
       </div>
     </footer>
 
+    <script src="login.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
